@@ -1,0 +1,25 @@
+:root {
+  --background-general: #ffffff;
+  --background-slogan: #f5d3a6;
+  --background-slogan-gradient: rgba(47, 48, 58, 0.4);
+  --background-icon-footer: rgba(255, 255, 255, 0.1);
+  --background-label: rgba(236, 182, 65, 0.6);
+  --color-logo: #ff0000;
+  --color-general: #ff0000;
+  --color-last: #ff4500;
+  --color-nav-link: #ffa500;
+  --color-footer-link: #ff4500;
+  --color-icon-footer: #ffffff;
+  --color-label: #ff0000;
+  --color-border-product: #f3ddd1f6;
+  --color-border-header: #cdffcc;
+  --color-button: #cdffcc;
+  --color-button-link: #a3f5a2;
+  --color-overlay-product: rgba(247, 217, 134, 0.8);
+  --color-overlay-body: rgba(0, 0, 0, 0.7);
+  --color-product-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  --transition-duration: 250ms;
+  --transition-duration-product: 500ms;
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+}
