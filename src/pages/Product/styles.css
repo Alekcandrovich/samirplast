@@ -1,0 +1,114 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  padding: 0;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .content__clik {
+    flex-basis: calc((100% - 160px) / 1);
+    border-radius: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .content__clik {
+    flex-basis: calc((100% - 150px) / 2);
+    border-radius: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content__clik {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+
+.content__clik:hover,
+.content__clik:focus {
+  border-radius: 8px;
+  box-shadow: var(--color-product-shadow);
+}
+
+.flex-grow {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-port {
+  flex-grow: 1;
+  border: 1px solid var(--color-border-product);
+  border-radius: 8px;
+  padding: 5px 18px;
+}
+
+.content .titel-port {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--color-general);
+}
+
+.overlay-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.overlay-text {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform var(--transition-timing) var(--transition-duration),
+    transform var(--transition-timing) var(--transition-duration-product);
+  background-color: var(--color-overlay-product);
+  font-size: 16px;
+  line-height: 1.556;
+  letter-spacing: 0.03em;
+  padding: 0 10px;
+  margin: 0;
+  text-decoration: none;
+  color: var(--color-label);
+}
+
+.overlay-thumb:hover .overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+  background-color: var(--color-overlay-product);
+}
+
+.price_button {
+  border-radius: 8px;
+  border: none;
+  padding: 2px 50px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  text-align: center;
+  background-color: var(--color-button);
+  color: var(--color-general);
+  box-shadow: var(--color-product-shadow);
+  transition: background-color var(--transition-timing) var(--transition-duration);
+}
+
+.price_button:hover,
+.price_button:focus {
+  background-color: var(--color-button-link);
+}

@@ -1,0 +1,163 @@
+.footer {
+  padding: 50px 0;
+  background-color: var(--background-slogan);
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 30px 0;
+  }
+}
+
+.address {
+  margin: 15px 0 0 0;
+  color: var(--color-general);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .address {
+    margin: 20px 0 0 0;
+  }
+}
+
+.address .link {
+  display: block;
+  margin: 12px 0 0 0;
+  color: var(--color-general);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  transition: color var(--transition-timing) var(--transition-duration);
+}
+
+@media screen and (min-width: 1200px) {
+  .address .link {
+    margin: 9px 0 0 0;
+  }
+}
+
+.address .link:hover,
+.address .link:focus {
+  color: var(--color-footer-link);
+}
+
+@media screen and (min-width: 768px) {
+  .social-contact {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .social-contact {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer-contact {
+  display: block;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-contact {
+      text-align: start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-contact {
+    text-align: start;
+    margin-right: 94px;
+  }
+}
+
+.compound {
+  margin: 60px 0 0 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-general);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .compound {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .compound {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0 0 0;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-social {
+    justify-content: start;
+  }
+}
+
+.a-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border: none;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+  color: var(--color-general);
+  background-color: var(--background-icon-footer);
+  transition: background-color var(--transition-timing) var(--transition-duration),
+    color var(--transition-timing) var(--transition-duration);
+}
+
+
+.icon-footer {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  align-items: center;
+}
+
+.a-footer:hover,
+.a-footer:focus {
+  background-color: var(--color-footer-link);
+  color: var(--color-icon-footer);
+}
+
+/* Добавьте следующий код в ваши стили */
+a:active,
+a:focus {
+  outline: none;
+  /* Убираем контур фокуса */
+}
+
+/* Уточнение стилей для ссылок внутри .a-footer */
+.a-footer a:active,
+.a-footer a:focus {
+  outline: none;
+  /* Убираем контур фокуса */
+}
