@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'modern-normalize';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
@@ -26,7 +26,6 @@ import './App.css';
 
 const App = () => (
   <div className="App">
-    <StrictMode>
       <Router basename="/samirplast">
         <ScrollToTop />
         <Header />
@@ -50,7 +49,6 @@ const App = () => (
         </Routes>
         <Footer />
       </Router>
-    </StrictMode>
   </div>
 );
 
