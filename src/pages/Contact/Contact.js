@@ -1,3 +1,4 @@
+import React from "react";
 import map from '../../images/map.jpg';
 import './styles.css';
 
