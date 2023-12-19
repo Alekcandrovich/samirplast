@@ -19,6 +19,4 @@
 /* !---------------Modal Price-------------------------- */.modal_price{background-color:var(--background-slogan);border-radius:8px;height:100%;left:50%;margin:0;max-height:680px;max-width:820px;padding:40px;position:fixed;top:50%;transform:translate(-50%,-50%) scale(1);transition:transform var(--transition-timing) var(--transition-duration);width:95%;z-index:1000}@media screen and (max-width:1200px){.modal_price{max-height:680px;max-width:780px}}
 
 /* !---------------Modal overlay-------------------------- */.modal-overlay{background-color:var(--color-overlay-body);display:none;height:100%;left:0;position:fixed;top:0;width:100%;z-index:1000}.modal-open .modal-overlay{display:block}
-
-/* !---------------Contact Page-------------------------- */
-/*# sourceMappingURL=main.7492d86c.css.map*/
+/*# sourceMappingURL=main.8cb45409.css.map*/
