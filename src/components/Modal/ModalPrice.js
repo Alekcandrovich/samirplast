@@ -12,13 +12,18 @@ const ModalPrice = ({ imgSrc, isOpen, onRequestClose }) => {
     }
   }, [isOpen]);
 
+  const isImageLong = imgSrc.length > 100;
+
   return (
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel="Image Modal"
       overlayClassName="modal-overlay"
-      className="modal-content"
+      // className="modal-content"
+      className={`modal-content ${
+        isImageLong ? 'modal-content-scrollable' : ''
+      }`}
     >
       <button onClick={onRequestClose} className="close-modal">
         <svg className="icon-modal">
