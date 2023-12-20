@@ -12,8 +12,6 @@ const ModalPrice = ({ imgSrc, isOpen, onRequestClose }) => {
     }
   }, [isOpen]);
 
-  const isImageLong = imgSrc.length > 100;
-
   return (
     <Modal
       isOpen={isOpen}
