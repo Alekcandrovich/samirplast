@@ -1,37 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Modal from 'react-modal';
 import icons from './icons.svg';
 import './styles.css';
 
 const ModalPrice = ({ imgSrc, isOpen, onRequestClose }) => {
-  const modalStyle = {
-    content: {
-      position: 'fixed',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%) scale(1)',
-      width: '95%',
-      height: '100%',
-      maxWidth: '820px',
-      maxHeight: '680px',
-      backgroundColor: 'var(--background-slogan)',
-      borderRadius: '8px',
-      padding: '40px',
-      margin: '0',
-      zIndex: '1000',
-      transition: 'transform var(--transition-timing) var(--transition-duration)',
-      display: isOpen ? 'block' : 'none',
-    },
-  };
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+  }, [isOpen]);
 
   return (
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel="Image Modal"
-      style={modalStyle}
+      overlayClassName="modal-overlay"
+      className="modal-content"
     >
-      <button onClick={onRequestClose} className="close-modal close-posicion">
+      <button onClick={onRequestClose} className="close-modal">
         <svg className="icon-modal">
           <use xlinkHref={`${icons}#close`} />
         </svg>
