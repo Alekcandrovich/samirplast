@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import './styles.css';
 import icons from './icons.svg';
+import './styles.css';
 
 const Footer = () => {
   return (
