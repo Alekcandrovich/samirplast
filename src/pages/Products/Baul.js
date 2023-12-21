@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ModalPrice from '../../components/Modal/ModalPrice';
 import baul_1 from '../../images/baul_1.jpg';
 import baul_2 from '../../images/baul_2.jpg';
 
 const Baul = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [imgSrc, setImgSrc] = useState('');
+
+  const openModal = imgSrc => {
+    setImgSrc(imgSrc);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <main>
       <section className="section3">
@@ -113,12 +126,20 @@ const Baul = () => {
           <button
             type="button"
             className="product_button open-modal_price"
-            data-pdf-src="../prices/baul.pdf"
+            onClick={() =>
+              openModal(`${process.env.PUBLIC_URL}/prices/baul.jpg`)
+            }
           >
             ПОДИВИТИСЯ ПРАЙС - ЛИСТ
           </button>
         </div>
       </section>
+
+      <ModalPrice
+        imgSrc={imgSrc}
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+      />
     </main>
   );
 };
