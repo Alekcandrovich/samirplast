@@ -25,11 +25,9 @@ const ModalPrice = ({ imgSrc, isOpen, onRequestClose }) => {
           <use xlinkHref={`${icons}#close`} />
         </svg>
       </button>
-      <img
-        src={imgSrc}
-        alt="ПРАЙС - ЛИСТ"
-        style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
-      />
+      <div className="image-container">
+        <img src={imgSrc} alt="ПРАЙС - ЛИСТ" className="modal-image" />
+      </div>
     </Modal>
   );
 };
