@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import ModalPrice from '../../components/Modal/ModalPrice';
 import bopp_1 from '../../images/bopp_1.jpg';
 
 const Bopp = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [imgSrc, setImgSrc] = useState('');
+
+  const openModal = () => {
+    const currentPath = window.location.pathname;
+    const imageName = currentPath.split('/').pop();
+
+    setImgSrc(`${process.env.PUBLIC_URL}/prices/${imageName}.jpg`);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  useEffect(() => {
+    const handlePathChange = () => {
+      if (modalIsOpen) {
+        openModal();
+      }
+    };
+
+    window.addEventListener('popstate', handlePathChange);
+
+    return () => {
+      window.removeEventListener('popstate', handlePathChange);
+    };
+  }, [modalIsOpen]);
+
   return (
     <main>
       <section className="section3">
@@ -38,17 +68,24 @@ const Bopp = () => {
           </div>
         </div>
       </section>
+      
       <section className="section4">
         <div className="button">
           <button
             type="button"
             className="product_button open-modal_price"
-            data-pdf-src="../prices/bopp.pdf"
+            onClick={openModal}
           >
             ПОДИВИТИСЯ ПРАЙС - ЛИСТ
           </button>
         </div>
       </section>
+
+      <ModalPrice
+        imgSrc={imgSrc}
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+      />
     </main>
   );
 };

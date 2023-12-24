@@ -1,8 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import ModalPrice from '../../components/Modal/ModalPrice';
 import meshki_1 from '../../images/meshki_1.jpg';
 import meshki_2 from '../../images/meshki_2.jpg';
 
 const Meshki = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [imgSrc, setImgSrc] = useState('');
+
+  const openModal = () => {
+    const currentPath = window.location.pathname;
+    const imageName = currentPath.split('/').pop();
+
+    setImgSrc(`${process.env.PUBLIC_URL}/prices/${imageName}.jpg`);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  useEffect(() => {
+    const handlePathChange = () => {
+      if (modalIsOpen) {
+        openModal();
+      }
+    };
+
+
+    window.addEventListener('popstate', handlePathChange);
+
+
+    return () => {
+      window.removeEventListener('popstate', handlePathChange);
+    };
+  }, [modalIsOpen]);
+
   return (
     <main>
       <section className="section3">
@@ -85,14 +117,21 @@ const Meshki = () => {
           <button
             type="button"
             className="product_button open-modal_price"
-            data-pdf-src="../prices/meshki.pdf"
+            onClick={openModal}
           >
             ПОДИВИТИСЯ ПРАЙС - ЛИСТ
           </button>
         </div>
       </section>
+
+      <ModalPrice
+        imgSrc={imgSrc}
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+      />
     </main>
   );
 };
 
 export default Meshki;
+
