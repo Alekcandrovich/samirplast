@@ -20,9 +20,9 @@ const Home = () => {
           <div className="container">
             <h2 className="product_titel">НАША ПРОДУКЦIЯ</h2>
             <ul className="product">
-              {productsData.map(({ name, title, img }, id) => (
+              {productsData.map(({ productName, title, img }, id) => (
                 <li key={id} className="product__item choice">
-                  <Link to={`/products/${name.toLowerCase()}`}>
+                  <Link to={`/products/${productName.toLowerCase()}`}>
                     <div className="label-thumb">
                       <img
                         className="pruduct__photo"

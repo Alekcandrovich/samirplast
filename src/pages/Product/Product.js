@@ -21,9 +21,9 @@ const Product = () => {
     <div className="container">
       <ul className="content">
         {productsData.map(
-          ({ name, title, title_product, description, img }, id) => (
+          ({ productName, title, title_product, description, img }, id) => (
             <li key={id}>
-              <Link to={`/products/${name.toLowerCase()}`}>
+              <Link to={`/products/${productName.toLowerCase()}`}>
                 <div className="content__clik">
                   <div className="overlay-thumb">
                     <img src={process.env.PUBLIC_URL + img} alt={title} />
@@ -47,7 +47,7 @@ const Product = () => {
                   className="price_button open-modal_price"
                   onClick={() =>
                     openModal(
-                      `${process.env.PUBLIC_URL}/prices/${name}.jpg`
+                      `${process.env.PUBLIC_URL}/prices/${productName}.jpg`
                     )
                   }
                 >

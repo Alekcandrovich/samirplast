@@ -11,7 +11,7 @@ const Baul = () => {
 
   const productDetails1 = {
     imageSrc: baul_1,
-    productName: 'ПАКЕТИ ТИПУ - МАЙКА',
+    productName: 'МІШКИ ПОЛІПРОПІЛЕНОВІ',
     productDescription: `
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Останніми роками одним із
       найпоширеніших видів пакувального матеріалу на Українському
@@ -77,7 +77,7 @@ const Baul = () => {
 
   const productDetails2 = {
     imageSrc: baul_2,
-    productName: 'ОПИС ПАКЕТIВ ТИПУ - МАЙКА',
+    productName: 'БАУЛ ПОЛІПРОПІЛЕНОВИЙ БІЛИЙ',
     productDescription: `
       &nbsp;&nbsp;&nbsp;Баул поліпропіленовий – дуже місткий великий
       мішок. Використовується, в основному, для транспортування i
