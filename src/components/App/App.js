@@ -26,29 +26,29 @@ import './App.css';
 
 const App = () => (
   <div className="App">
-      <Router basename="/samirplast">
-        <ScrollToTop />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/products/baul" element={<Baul />} />
-          <Route path="/products/bopp" element={<Bopp />} />
-          <Route path="/products/mayka" element={<Mayka />} />
-          <Route path="/products/meshki" element={<Meshki />} />
-          <Route path="/products/new" element={<New />} />
-          <Route path="/products/odejda" element={<Odejda />} />
-          <Route path="/products/paket" element={<Paket />} />
-          <Route path="/products/Rukav" element={<Rukav />} />
-          <Route path="/products/scotch" element={<Scotch />} />
-          <Route path="/products/streych" element={<Streych />} />
-          <Route path="/products/trempel" element={<Trempel />} />
-          <Route path="/products/zip" element={<Zip />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
-        <Footer />
-      </Router>
+    <Router basename="/samirplast">
+      <ScrollToTop />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/products/baul" element={<Baul />} />
+        <Route path="/products/bopp" element={<Bopp />} />
+        <Route path="/products/mayka" element={<Mayka />} />
+        <Route path="/products/meshki" element={<Meshki />} />
+        <Route path="/products/new" element={<New />} />
+        <Route path="/products/odejda" element={<Odejda />} />
+        <Route path="/products/paket" element={<Paket />} />
+        <Route path="/products/Rukav" element={<Rukav />} />
+        <Route path="/products/scotch" element={<Scotch />} />
+        <Route path="/products/streych" element={<Streych />} />
+        <Route path="/products/trempel" element={<Trempel />} />
+        <Route path="/products/zip" element={<Zip />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+      <Footer />
+    </Router>
   </div>
 );
 
