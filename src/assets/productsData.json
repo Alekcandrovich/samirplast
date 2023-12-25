@@ -4,64 +4,112 @@
     "productName": "trempel",
     "title": "ПЛIЧКА (ТРЕМПЕЛI, ВIШАЛКИ) ДЛЯ ОДЯГУ",
     "title_product": "ПЛIЧКА (ТРЕМПЕЛI, ВIШАЛКИ)<br />ДЛЯ ОДЯГУ",
+    "title_product_1": "",
+    "title_product_2": "",
     "description": "Вішалки (плічка, тремпелі) для одягу на всі сезони по доступним цінам.",
-    "img": "/images/trempel.jpg"
+    "description_detail_1": "",
+    "description_detail_2": "",
+    "img": "/images/trempel.jpg",
+    "productImg_1": "/images/trempel_1.jpg",
+    "productImg_2": "/images/trempel_2.jpg"
   },
   {
     "id": "02",
     "productName": "scotch",
     "title": "СКОТЧ ПАКУВАЛЬНИЙ ПРОЗОРИЙ",
     "title_product": "СКОТЧ ПАКУВАЛЬНИЙ<br />ПРОЗОРИЙ",
+    "title_product_1": "",
+    "title_product_2": "",
     "description": "Високоякісна липка стрічка, виготовлена з двоосно-орієнтованого поліпропілену i посиленого липкого шару акрилу.",
-    "img": "/images/scotch.jpg"
+    "description_detail_1": "",
+    "description_detail_2": "",
+    "img": "/images/scotch.jpg",
+    "productImg_1": "/images/scotch_1.jpg",
+    "productImg_2": "/images/scotch_2.jpg"
   },
   {
     "id": "03",
     "productName": "rukav",
     "title": "ПЛIВКА ПОЛIЕТИЛЕНОВА (РУКАВ), ТЕРМОУСАДКА",
     "title_product": "ПЛIВКА ПОЛIЕТИЛЕНОВА<br />(РУКАВ), ТЕРМОУСАДКА",
+    "title_product_1": "",
+    "title_product_2": "",
+    "description_detail_1": "",
+    "description_detail_2": "",
     "description": "Плівки в рулонах з поліетилену високого або низького тиску у вигляді рукава (можливо з фальцями), напіврукава i полотна, товщиною від 5 до 200 мкм. Можливо зафарбувати плівку в необхідний колір.",
-    "img": "/images/rukav.jpg"
+    "img": "/images/rukav.jpg",
+    "productImg_1": "/images/rukav_1.jpg",
+    "productImg_2": "/images/rukav_2.jpg"
   },
   {
     "id": "04",
     "productName": "streych",
     "title": "СТРЕЙЧ-ПЛIВКА ПАКУВАЛЬНА",
     "title_product": "СТРЕЙЧ-ПЛIВКА<br />ПАКУВАЛЬНА",
+    "title_product_1": "",
+    "title_product_2": "",
+    "description_detail_1": "",
+    "description_detail_2": "",
     "description": ">Стрейч-плівка використовується в широкому спектрі господарських потреб для обгортання i пакування різних матеріалів i предметів.",
-    "img": "/images/streych.jpg"
+    "img": "/images/streych.jpg",
+    "productImg_1": "/images/streych_1.jpg",
+    "productImg_2": "/images/streych_2.jpg"
   },
   {
     "id": "05",
     "productName": "meshki",
     "title": "ВЕЛИКІ ПАКУВАЛЬНІ ПАКЕТИ ТА МІШКИ ДЛЯ СМІТТЯ",
     "title_product": "ВЕЛИКІ ПАКУВАЛЬНІ ПАКЕТИ<br />ТА МІШКИ ДЛЯ СМІТТЯ",
+    "title_product_1": "",
+    "title_product_2": "",
     "description": "Пакети та мішки з поліетилену використовують для транспортування i зберігання предметів побутового, промислового, будівельного i іншого призначення.",
-    "img": "/images/meshki.jpg"
+    "description_detail_1": "",
+    "description_detail_2": "",
+    "img": "/images/meshki.jpg",
+    "productImg_1": "/images/meshki_1.jpg",
+    "productImg_2": "/images/meshki_2.jpg"
   },
   {
     "id": "06",
     "productName": "odejda",
     "title": "ПРОЗОРI ПАКЕТИ-ЧОХЛИ ДЛЯ ОДЯГУ",
     "title_product": "ПРОЗОРI ПАКЕТИ-ЧОХЛИ<br />ДЛЯ ОДЯГУ",
+    "title_product_1": "",
+    "title_product_2": "",
     "description": "Широкий асортимент пакетів-чохлів для одягу різної довжини. Можливе нанесення логотипу. Розробка дизайну. Доступні ціни.",
-    "img": "/images/odejda.jpg"
+    "description_detail_1": "",
+    "description_detail_2": "",
+    "img": "/images/odejda.jpg",
+    "productImg_1": "/images/odejda_1.jpg",
+    "productImg_2": "/images/odejda_2.jpg"
   },
   {
     "id": "07",
     "productName": "bopp",
     "title": "БОПП-ПАКЕТИ – ПАКЕТИ З ПОЛIПРОПIЛЕНУ",
     "title_product": "БОПП-ПАКЕТИ – ПАКЕТИ З<br />ПОЛIПРОПIЛЕНУ",
+    "title_product_1": "",
+    "title_product_2": "",
     "description": "Прозорі пакети БОПП з клейовим клапаном. Виготовлені з поліпропілену високої міцності.",
-    "img": "/images/bopp.jpg"
+    "description_detail_1": "",
+    "description_detail_2": "",
+    "img": "/images/bopp.jpg",
+    "productImg_1": "/images/bopp_1.jpg",
+    "productImg_2": "/images/bopp_2.jpg"
   },
   {
     "id": "08",
     "productName": "zip",
     "title": "ZIP-ПАКЕТИ ТА ПАКЕТИ-СЛАЙДЕРИ",
     "title_product": "ZIP-ПАКЕТИ ТА<br />ПАКЕТИ-СЛАЙДЕРИ",
+    "title_product_1": "",
+    "title_product_2": "",
+    "description_detail_1": "",
+    "description_detail_2": "",
     "description": "Поліетиленові пакети з застібкою (замком) для фасування i пакування товарів i продуктів харчування в широкому асортименті.",
-    "img": "/images/zip.jpg"
+    "img": "/images/zip.jpg",
+    "productImg_1": "/images/zip_1.jpg",
+    "productImg_2": "/images/zip_2.jpg"
   },
   {
     "id": "09",
@@ -96,15 +144,27 @@
     "productName": "paket",
     "title": "ПАКЕТИ ПОЛIЕТИЛЕНОВI",
     "title_product": "ПАКЕТИ<br />ПОЛIЕТИЛЕНОВI",
+    "title_product_1": "",
+    "title_product_2": "",
     "description": "Пакети з поліетиленової плівки високого тиску (ПЕВТ) для пакування.",
-    "img": "/images/paket.jpg"
+    "description_detail_1": "",
+    "description_detail_2": "",
+    "img": "/images/paket.jpg",
+    "productImg_1": "/images/paket_1.jpg",
+    "productImg_2": "/images/paket_2.jpg"
   },
   {
     "id": "12",
     "productName": "new",
     "title": "НЕТ НАЗВАНИЯ ПОЗИЦИИ",
     "title_product": "НЕТ НАЗВАНИЯ<br />ПОЗИЦИИ",
+    "title_product_1": "",
+    "title_product_2": "",
     "description": "Нужно сделать описание для этой позиции.",
-    "img": "/images/no_image_1.jpg"
+    "description_detail_1": "",
+    "description_detail_2": "",
+    "img": "/images/no_image_1.jpg",
+    "productImg_1": "/images/no_image_1.jpg",
+    "productImg_2": "/images/no_image_2.jpg"
   }
 ]
