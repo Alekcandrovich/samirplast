@@ -148,16 +148,12 @@
   color: var(--color-icon-footer);
 }
 
-/* Добавьте следующий код в ваши стили */
 a:active,
 a:focus {
   outline: none;
-  /* Убираем контур фокуса */
 }
 
-/* Уточнение стилей для ссылок внутри .a-footer */
 .a-footer a:active,
 .a-footer a:focus {
   outline: none;
-  /* Убираем контур фокуса */
 }
