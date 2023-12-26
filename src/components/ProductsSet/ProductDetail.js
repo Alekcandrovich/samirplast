@@ -38,7 +38,7 @@ const ProductDetail = ({ product }) => {
       {description_detail_2 && (
         <section className="section3">
           <div className="container">
-            <div className="product_detail_1 open-modal_product">
+            <div className="product_detail_2 open-modal_product">
               <img
                 className="product_detail_image"
                 src={process.env.PUBLIC_URL + productImg_2}

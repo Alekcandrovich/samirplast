@@ -16,7 +16,7 @@ function createImageSlider(images) {
   closeButton.classList.add('close-modal', 'close-posicion');
   closeButton.innerHTML = `
     <svg class="icon-modal">
-      <use href="../images/icons.svg#icon-close"></use>
+      <use href="./icons.svg#close"></use>
     </svg>
   `;
 
@@ -53,14 +53,14 @@ function createImageSlider(images) {
     prevArrow: `
       <div class="slider-arrow prev">
         <svg class="icon-modal">
-          <use href="../images/icons.svg#icon-left"></use>
+          <use href="./icons.svg#left"></use>
         </svg>
       </div>
     `,
     nextArrow: `
       <div class="slider-arrow next">
         <svg class="icon-modal">
-          <use href="../images/icons.svg#icon-right"></use>
+          <use href="./icons.svg#right"></use>
         </svg>
       </div>
     `,
