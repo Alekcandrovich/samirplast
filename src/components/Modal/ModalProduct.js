@@ -1,139 +1,67 @@
-import $ from 'jQuery';
+// ModalProduct.js
+import React, { useEffect } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import "./styles.css";
 
-let overlayCount = 0;
+const ModalProduct = ({ images, closeModal }) => {
+  useEffect(() => {
+    const closeOnEsc = (event) => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    };
 
-function createImageSlider(images) {
-  const modalOverlay = document.createElement('div');
-  modalOverlay.classList.add('modal-overlay');
+    document.body.addEventListener('keydown', closeOnEsc);
 
-  const modal = document.createElement('div');
-  modal.id = 'modalProduct';
-  modal.classList.add('modal_product');
+    return () => {
+      document.body.removeEventListener('keydown', closeOnEsc);
+    };
+  }, [closeModal]);
 
-  const closeButton = document.createElement('button');
-  closeButton.setAttribute('type', 'button');
-  closeButton.setAttribute('data-modal-close', true);
-  closeButton.classList.add('close-modal', 'close-posicion');
-  closeButton.innerHTML = `
-    <svg class="icon-modal">
-      <use href="./icons.svg#close"></use>
-    </svg>
-  `;
-
-  const sliderContainer = document.createElement('div');
-  sliderContainer.classList.add('slider-container');
-
-  const slider = document.createElement('div');
-  slider.classList.add('slider');
-
-  images.forEach(imageData => {
-    const { imageSrc, text } = imageData;
-    const slide = createImageSlide(imageSrc, text);
-    slider.appendChild(slide);
-  });
-
-  sliderContainer.appendChild(slider);
-  modal.appendChild(closeButton);
-  modal.appendChild(sliderContainer);
-
-  if (overlayCount === 0) {
-    document.body.classList.add('modal-open');
-    document.body.appendChild(modalOverlay);
-  }
-
-  document.body.appendChild(modal);
-
-  overlayCount++;
-
-  $(slider).slick({
+  const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: { delay: 2000 },
+    autoplay: true,
+    autoplaySpeed: 2000,
     infinite: true,
-    prevArrow: `
-      <div class="slider-arrow prev">
-        <svg class="icon-modal">
-          <use href="./icons.svg#left"></use>
-        </svg>
-      </div>
-    `,
-    nextArrow: `
-      <div class="slider-arrow next">
-        <svg class="icon-modal">
-          <use href="./icons.svg#right"></use>
-        </svg>
-      </div>
-    `,
+    prevArrow: <div className="slider-arrow prev">&lt;</div>,
+    nextArrow: <div className="slider-arrow next">&gt;</div>,
     pauseOnHover: false,
-  });
-
-  let isModalOpen = true;
-
-  const closeOnEsc = event => {
-    if (event.key === 'Escape' && isModalOpen) {
-      closeModal();
-    }
   };
 
-  const closeModal = () => {
-    isModalOpen = false;
-    overlayCount--;
+  return (
+    <div className="modal-overlay">
+      <div className="modal-product">
+        <button
+          type="button"
+          className="close-modal close-position"
+          onClick={closeModal}
+        >
+          <svg className="icon-modal">
+            <use href="./icons.svg#close"></use>
+          </svg>
+        </button>
+        <Slider {...settings}>
+          {images.map((imageData, index) => (
+            <div key={index} className="slide">
+              <img src={imageData.imageSrc} alt={`Slide ${index + 1}`} />
+              <p
+                style={{
+                  textAlign: 'center',
+                  marginTop: '10px',
+                  width: '100%',
+                }}
+              >
+                {imageData.text}
+              </p>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </div>
+  );
+};
 
-    if (overlayCount === 0) {
-      document.body.classList.remove('modal-open');
-      document.body.removeChild(modalOverlay);
-    }
-
-    document.body.removeEventListener('keydown', closeOnEsc);
-    closeModalFunction(modal);
-  };
-
-  closeButton.addEventListener('click', closeModal);
-  document.body.addEventListener('keydown', closeOnEsc);
-
-  return modal;
-}
-
-function createImageSlide(imageSrc, text) {
-  const slide = document.createElement('div');
-  slide.classList.add('slide');
-
-  const image = document.createElement('img');
-  image.src = imageSrc;
-  image.alt = 'Slide Image';
-  slide.appendChild(image);
-
-  const textElement = document.createElement('p');
-  textElement.style.textAlign = 'center';
-  textElement.style.marginTop = '10px';
-  textElement.style.width = '100%';
-  slide.appendChild(textElement);
-
-  if (text.includes('(')) {
-    const [prefix, suffix] = text.split('(');
-
-    const prefixSpan = document.createElement('span');
-    prefixSpan.textContent = prefix;
-    textElement.appendChild(prefixSpan);
-
-    const suffixSpan = document.createElement('span');
-    const [size, rest] = suffix.split(')');
-    suffixSpan.textContent = `${size}${rest}`;
-    suffixSpan.style.fontWeight = 'bold';
-    suffixSpan.style.color = 'red';
-    textElement.appendChild(suffixSpan);
-  } else {
-    textElement.textContent = text;
-  }
-
-  return slide;
-}
-
-function closeModalFunction(modal) {
-  if (modal && document.body.contains(modal)) {
-    document.body.removeChild(modal);
-  }
-}
-
-export default createImageSlider;
-export { closeModalFunction };
+export default ModalProduct;

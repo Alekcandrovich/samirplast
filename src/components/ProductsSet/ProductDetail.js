@@ -1,5 +1,7 @@
-import React from 'react';
+// ProductDetail.js
+import React, { useState } from 'react';
 import './styles.css';
+import CreateImageSlider from '../Modal/ModalProduct';
 
 const ProductDetail = ({ product }) => {
   const {
@@ -11,10 +13,31 @@ const ProductDetail = ({ product }) => {
     description_detail_2,
   } = product;
 
+  const openSlider = (images) => {
+    setIsModalOpen(true);
+    setImages(images);
+  };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [images, setImages] = useState([]);
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setImages([]);
+  };
+
   return (
     <main>
       {description_detail_1 && (
-        <section className="section3">
+        <section
+          className="section3"
+          onClick={() =>
+            openSlider([
+              { imageSrc: process.env.PUBLIC_URL + productImg_1, text: title_product_1 },
+              { imageSrc: process.env.PUBLIC_URL + productImg_2, text: title_product_1 },
+            ])
+          }
+        >
           <div className="container">
             <div className="product_detail_1 open-modal_product">
               <img
@@ -36,7 +59,14 @@ const ProductDetail = ({ product }) => {
       )}
 
       {description_detail_2 && (
-        <section className="section3">
+        <section
+          className="section3"
+          onClick={() =>
+            openSlider([
+              { imageSrc: process.env.PUBLIC_URL + productImg_2, text: title_product_2 },
+            ])
+          }
+        >
           <div className="container">
             <div className="product_detail_2 open-modal_product">
               <img
@@ -56,6 +86,8 @@ const ProductDetail = ({ product }) => {
           </div>
         </section>
       )}
+
+      {isModalOpen && <CreateImageSlider images={images} closeModal={closeModal} />}
     </main>
   );
 };
