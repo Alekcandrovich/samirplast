@@ -158,63 +158,6 @@
 
 
 
-// // ProductDetail.js
-// import React, { useState } from 'react';
-// import CreateImageSlider from '../Modal/ModalProduct';
-// import ProductDetailSection from './ProductDetailSection';
-// import './styles.css';
-
-// const ProductDetail = ({ product }) => {
-//   const [isModalOpen, setIsModalOpen] = useState(false);
-//   const [images, setImages] = useState([]);
-
-//   const openSlider = images => {
-//     setIsModalOpen(true);
-//     setImages(images);
-//   };
-
-//   const closeModal = () => {
-//     setIsModalOpen(false);
-//     setImages([]);
-//   };
-
-//   const createSliderImages = (product, prefix) =>
-//     new Array(5).fill(undefined).map((_, index) => ({
-//       imageSrc: `${process.env.PUBLIC_URL}${product[`${prefix}${index + 1}`]}`,
-//       text: product[`${prefix}Text_${index + 1}`],
-//     }));
-
-
-//   return (
-//     <main>
-//       <ProductDetailSection
-//         productImage={process.env.PUBLIC_URL + product.productImg_1}
-//         title={product.title_product_1}
-//         description={product.description_detail_1}
-//         openSlider={openSlider}
-//         sliderImages={createSliderImages(product, 'sliderImg_1_')}
-//       />
-//       <ProductDetailSection
-//         productImage={process.env.PUBLIC_URL + product.productImg_2}
-//         title={product.title_product_2}
-//         description={product.description_detail_2}
-//         openSlider={openSlider}
-//         sliderImages={createSliderImages(product, 'sliderImg_2_')}
-//       />
-//       {isModalOpen && (
-//         <CreateImageSlider images={images} closeModal={closeModal} />
-//       )}
-//     </main>
-//   );
-// };
-
-// export default ProductDetail;
-
-
-
-
-
-
 // ProductDetail.js
 import React, { useState } from 'react';
 import CreateImageSlider from '../Modal/ModalProduct';
@@ -269,3 +212,64 @@ const ProductDetail = ({ product }) => {
 };
 
 export default ProductDetail;
+
+
+
+
+
+// ProductDetail.js
+// import React, { useState } from 'react';
+// import CreateImageSlider from '../Modal/ModalProduct';
+// import ProductDetailSection from './ProductDetailSection';
+// import './styles.css';
+
+// const ProductDetail = ({ product }) => {
+//   const [isModalOpen, setIsModalOpen] = useState(false);
+//   const [images, setImages] = useState([]);
+
+//   const openSlider = images => {
+//     setIsModalOpen(true);
+//     setImages(images);
+//   };
+
+//   const closeModal = () => {
+//     setIsModalOpen(false);
+//     setImages([]);
+//   };
+
+//   const createSliderImages = (product, prefix) =>
+//     new Array(5).fill(undefined).map((_, index) => ({
+//       imageSrc: `${process.env.PUBLIC_URL}${product[`${prefix}${index + 1}`]}`,
+//       text: product[`${prefix}Text_${index + 1}`],
+//     }));
+
+//   if (!product) {
+//     return null;
+//   }
+
+//   return (
+//     <main>
+//       <ProductDetailSection
+//         productImage={process.env.PUBLIC_URL + product.productImg_1}
+//         title={product.title_product_1}
+//         description={product.description_detail_1}
+//         openSlider={openSlider}
+//         sliderImages={createSliderImages(product, 'sliderImg_1_')}
+//         sliderTextPrefix="sliderText_1_"
+//       />
+//       {product.title_product_2 && (
+//         <ProductDetailSection
+//           productImage={process.env.PUBLIC_URL + product.productImg_2}
+//           title={product.title_product_2}
+//           description={product.description_detail_2}
+//           openSlider={openSlider}
+//           sliderImages={createSliderImages(product, 'sliderImg_2_')}
+//           sliderTextPrefix="sliderText_2_"
+//         />
+//       )}
+//       {isModalOpen && <CreateImageSlider images={images} closeModal={closeModal} />}
+//     </main>
+//   );
+// };
+
+// export default ProductDetail;
