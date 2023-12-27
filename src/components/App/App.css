@@ -7,7 +7,7 @@
 
 /* !---------------Modal Product-------------------------- */
 
-.modal_product {
+/* .modal_product {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -64,11 +64,11 @@
 .close-modal:hover,
 .close-modal:focus {
   color: var(--color-nav-link);
-}
+} */
 
 /* !---------------Slider-------------------------- */
 
-.slider-container {
+/* .slider-container {
   margin: 20px auto 0 auto;
   width: 400px;
   max-width: 100%;
@@ -115,4 +115,4 @@
 .slider-arrow:hover,
 .slider-arrow:focus {
   color: var(--color-nav-link);
-}
+} */
