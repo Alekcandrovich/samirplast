@@ -1,7 +1,7 @@
 // ProductDetail.js
 import React, { useState } from 'react';
-import './styles.css';
 import CreateImageSlider from '../Modal/ModalProduct';
+import './styles.css';
 
 const ProductDetail = ({ product }) => {
   const {
