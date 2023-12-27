@@ -8,6 +8,24 @@ const ProductDetail = ({ product }) => {
     productImg_1,
     title_product_1,
     description_detail_1,
+    sliderImg_1_1,
+    sliderText_1_1,
+    sliderImg_1_2,
+    sliderText_1_2,
+    sliderImg_1_3,
+    sliderText_1_3,
+    sliderImg_1_4,
+    sliderText_1_4,
+    sliderImg_2_1,
+    sliderText_2_1,
+    sliderImg_2_2,
+    sliderText_2_2,
+    sliderImg_2_3,
+    sliderText_2_3,
+    sliderImg_2_4,
+    sliderText_2_4,
+    sliderImg_2_5,
+    sliderText_2_5,
     productImg_2,
     title_product_2,
     description_detail_2,
@@ -33,8 +51,22 @@ const ProductDetail = ({ product }) => {
           className="section3"
           onClick={() =>
             openSlider([
-              { imageSrc: process.env.PUBLIC_URL + productImg_1, text: title_product_1 },
-              { imageSrc: process.env.PUBLIC_URL + productImg_2, text: title_product_1 },
+              {
+                imageSrc: process.env.PUBLIC_URL + sliderImg_1_1,
+                text: sliderText_1_1,
+              },
+              {
+                imageSrc: process.env.PUBLIC_URL + sliderImg_1_2,
+                text: sliderText_1_2,
+              },
+              {
+                imageSrc: process.env.PUBLIC_URL + sliderImg_1_3,
+                text: sliderText_1_3,
+              },
+              {
+                imageSrc: process.env.PUBLIC_URL + sliderImg_1_4,
+                text: sliderText_1_4,
+              },
             ])
           }
         >
@@ -63,7 +95,26 @@ const ProductDetail = ({ product }) => {
           className="section3"
           onClick={() =>
             openSlider([
-              { imageSrc: process.env.PUBLIC_URL + productImg_2, text: title_product_2 },
+              {
+                imageSrc: process.env.PUBLIC_URL + sliderImg_2_1,
+                text: sliderText_2_1,
+              },
+              {
+                imageSrc: process.env.PUBLIC_URL + sliderImg_2_2,
+                text: sliderText_2_2,
+              },
+              {
+                imageSrc: process.env.PUBLIC_URL + sliderImg_2_3,
+                text: sliderText_2_3,
+              },
+              {
+                imageSrc: process.env.PUBLIC_URL + sliderImg_2_4,
+                text: sliderText_2_4,
+              },
+              {
+                imageSrc: process.env.PUBLIC_URL + sliderImg_2_5,
+                text: sliderText_2_5,
+              },
             ])
           }
         >
@@ -87,7 +138,9 @@ const ProductDetail = ({ product }) => {
         </section>
       )}
 
-      {isModalOpen && <CreateImageSlider images={images} closeModal={closeModal} />}
+      {isModalOpen && (
+        <CreateImageSlider images={images} closeModal={closeModal} />
+      )}
     </main>
   );
 };
