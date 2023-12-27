@@ -13,7 +13,7 @@
     "productImg_1": "/images/trempel_1.jpg",
     "productImg_2": "/images/trempel_2.jpg",
     "sliderImg_1_1": "/images/trempel_1_1.jpg",
-    "sliderImg_1_1Text": "пластмасовий (дитячий 32см)",
+    "sliderText_1_1": "пластмасовий (дитячий 32см)",
     "sliderImg_1_2": "/images/trempel_1_2.jpg",
     "sliderText_1_2": "пластмасовий (літо 38см)",
     "sliderImg_1_3": "/images/trempel_1_3.jpg",
@@ -40,7 +40,11 @@
     "description": "Високоякісна липка стрічка, виготовлена з двоосно-орієнтованого поліпропілену i посиленого липкого шару акрилу.",
     "description_detail_1": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Складно переоцінити важливість такого матеріалу, як скотч-плівка у сучасному світі. Справді, вона використовується всюди: фіксація предметів, пакування, ремонт чогось, канцелярські потреби, оздоблювальні роботи, тощо. <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Пропонуємо вам високоякісну клейку стрічку, виготовлену з двухосноорієнтованого поліпропілену i підсиленого клейкого шару акрилу. Такий тип скотчу має безліч переваг, наприклад: <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - висока міцність <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - стійкість до агресивного середовища <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - нетоксичність та безпека <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - може застосовуватись при коливаннях температури та вологості <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - висока універсальність – дуже широкий спектр застосування <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Клейка стрічка товщиною 40 мікрон забезпечує міцне запечатування тари малої та середньої ваги. <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ширина 48 см, довжина 200/300 м, товщина 40 мкм <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b> В ящику 36 шт. </b>",
     "img": "/images/scotch.jpg",
-    "productImg_1": "/images/scotch_1.jpg"
+    "productImg_1": "/images/scotch_1.jpg",
+    "sliderImg_1_1": "/images/scotch_1_1.jpg",
+    "sliderText_1_1": "Слайд 1 з 2 (Скотч пакувальний)",
+    "sliderImg_1_2": "/images/scotch_1_2.jpg",
+    "sliderText_1_2": "Слайд 2 з 2 (Скотч пакувальний)"
   },
   {
     "id": "03",
@@ -54,7 +58,17 @@
     "description_detail_2": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; У сфері упаковки є види плівок, що при нагріванні здатні утискатися. Ця властивість притаманна тільки тим полімерним матеріалам, при виготовленні яких використовується спеціальна технологія із застосуванням форми пам'яті. Матеріал виготовляють необхідної форми з урахуванням розмірів, які він повинен прийняти після термоусадки.",
     "img": "/images/rukav.jpg",
     "productImg_1": "/images/rukav_1.jpg",
-    "productImg_2": "/images/rukav_2.jpg"
+    "productImg_2": "/images/rukav_2.jpg",
+    "sliderImg_1_1": "/images/rukav_1_1.jpg",
+    "sliderText_1_1": "Слайд 1 з 3 (Плівка поліетиленова)",
+    "sliderImg_1_2": "/images/rukav_1_2.jpg",
+    "sliderText_1_2": "Слайд 2 з 3 (Плівка поліетиленова)",
+    "sliderImg_1_3": "/images/rukav_1_3.jpg",
+    "sliderText_1_3": "Слайд 3 з 3 (Плівка поліетиленова)",
+    "sliderImg_2_1": "/images/rukav_2_1.jpg",
+    "sliderText_2_1": "Слайд 1 з 2 (Термоусадка)",
+    "sliderImg_2_2": "/images/rukav_2_2.jpg",
+    "sliderText_2_2": "Слайд 2 з 2 (Термоусадка)"
   },
   {
     "id": "04",
@@ -65,7 +79,13 @@
     "description": "Стрейч-плівка використовується в широкому спектрі господарських потреб для обгортання i пакування різних матеріалів i предметів.",
     "description_detail_1": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Стрейч-плівка призначена для обгортання різних матеріалів i предметів. Її унікальні властивості дозволяють використовувати її в широкому спектрі господарських потреб: для пакування (обмотки) великогабаритних предметів (палетів та інших предметів великих i неправильних форм), надійної фіксації вантажів, захисту речей від забруднень та пошкоджень, практично герметичне пакування для захисту від вологи та повітря. <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ступінь розтягнення плівки: min: 100%; max: 300% <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ширина: 500 мм <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Товщина: 20 мкм <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Довжина: 200м i 300м <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Вага: 1,5 кг та 2,0 кг",
     "img": "/images/streych.jpg",
-    "productImg_1": "/images/streych_1.jpg"
+    "productImg_1": "/images/streych_1.jpg",
+    "sliderImg_1_1": "/images/streych_1_1.jpg",
+    "sliderText_1_1": "Слайд 1 з 3 (Стрейч-плівка)",
+    "sliderImg_1_2": "/images/streych_1_2.jpg",
+    "sliderText_1_2": "Слайд 2 з 3 (Стрейч-плівка)",
+    "sliderImg_1_3": "/images/streych_1_3.jpg",
+    "sliderText_1_3": "Слайд 3 з 3 (Стрейч-плівка)"
   },
   {
     "id": "05",
@@ -79,7 +99,23 @@
     "description_detail_2": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Пакети для сміття це незамінний атрибут сучасного життя. Дозволяють зручно вирішувати проблему з сортуванням відходів. <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ПАКЕТ ДЛЯ СМІТТЯ, 120 ЛІТРІВ: <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ширина 70 см <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - довжина 110 см <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - товщина 20 мкм <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - матеріал ПЕВТ II <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - у рулоні 10 шт",
     "img": "/images/meshki.jpg",
     "productImg_1": "/images/meshki_1.jpg",
-    "productImg_2": "/images/meshki_2.jpg"
+    "productImg_2": "/images/meshki_2.jpg",
+    "sliderImg_1_1": "/images/meshki_1_1.jpg",
+    "sliderText_1_1": "Слайд 1 з 3 (Великі мішкі з поліетилену)",
+    "sliderImg_1_2": "/images/meshki_1_2.jpg",
+    "sliderText_1_2": "Слайд 2 з 3 (Великі мішкі з поліетилену)",
+    "sliderImg_1_3": "/images/meshki_1_3.jpg",
+    "sliderText_1_3": "Слайд 3 з 3 (Великі мішкі з поліетилену)",
+    "sliderImg_2_1": "/images/meshki_2_1.jpg",
+    "sliderText_2_1": "Слайд 1 з 5 (30 літрів)",
+    "sliderImg_2_2": "/images/meshki_2_2.jpg",
+    "sliderText_2_2": "Слайд 2 з 5 (60 лiтрiв)",
+    "sliderImg_2_3": "/images/meshki_2_3.jpg",
+    "sliderText_2_3": "Слайд 3 з 5 (120 лiтрiв)",
+    "sliderImg_2_4": "/images/meshki_2_4.jpg",
+    "sliderText_2_4": "Слайд 4 з 5 (240 лiтрiв)",
+    "sliderImg_2_5": "/images/meshki_2_5.jpg",
+    "sliderText_2_5": "Слайд 5 з 5 (Рулон віддільних пакетів)"
   },
   {
     "id": "06",
@@ -93,7 +129,19 @@
     "description_detail_2": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Стандартні чохли для одягу виготовляються шириною 55 см у складеному вигляді i 65 см у розгорнутому вигляді (з двома бічними складками по 5 см з кожного боку), довжиною від 80 см до 150 см. Товщина стінки пакету варіюється від 15 мкм до 30 мкм. <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В пакуванні 250 шт.",
     "img": "/images/odejda.jpg",
     "productImg_1": "/images/odejda_1.jpg",
-    "productImg_2": "/images/odejda_2.jpg"
+    "productImg_2": "/images/odejda_2.jpg",
+    "sliderImg_1_1": "/images/odejda_1_1.jpg",
+    "sliderText_1_1": "Слайд 1 з 3 (Чохли для одягу)",
+    "sliderImg_1_2": "/images/odejda_1_2.jpg",
+    "sliderText_1_2": "Слайд 2 з 3 (Чохли для одягу)",
+    "sliderImg_1_3": "/images/odejda_1_3.jpg",
+    "sliderText_1_3": "Слайд 3 з 3 (Чохли для одягу)",
+    "sliderImg_2_1": "/images/odejda_2_1.jpg",
+    "sliderText_2_1": "Слайд 1 з 3 (Чохли для одягу)",
+    "sliderImg_2_2": "/images/odejda_2_2.jpg",
+    "sliderText_2_2": "Слайд 2 з 3 (Чохли для одягу)",
+    "sliderImg_2_3": "/images/odejda_2_3.jpg",
+    "sliderText_2_3": "Слайд 3 з 3 (Чохли для одягу)"
   },
   {
     "id": "07",
@@ -104,7 +152,15 @@
     "description": "Прозорі пакети БОПП з клейовим клапаном. Виготовлені з поліпропілену високої міцності.",
     "description_detail_1": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Пакети БОПП з клейовим клапаном прозорі i виготовлені з поліпропілену високої міцності. Абревіатура БОПП (ВОРР) розшифровується як біоаксіально-орієнтована поліпропіленова плівка. Цей пакет буде надійним захистом для вашої продукції i, одночасно, завдяки прозорості, дозволить показати її зовнішній вигляд. Клейка стрічка, нанесена на край пакета, дозволяє помітно прискорити пакувальний процес. Кожний пакет має клапан 40 мм. Великий вибір пакетів БОПП дозволяє підібрати їх під різноманітний бізнес, а також використовувати в домашніх умовах. Пакети БОПП виготовляються тільки із первинної сировини, тому в них можна зберігати харчові продукти, але вони не підходять для заморожування. <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b> Товщина: </b> 20 мкм <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b> Упаковка: </b> 250 шт",
     "img": "/images/bopp.jpg",
-    "productImg_1": "/images/bopp_1.jpg"
+    "productImg_1": "/images/bopp_1.jpg",
+    "sliderImg_1_1": "/images/bopp_1_1.jpg",
+    "sliderText_1_1": "Слайд 1 з 4 (Пакети з клейовим клапаном)",
+    "sliderImg_1_2": "/images/bopp_1_2.jpg",
+    "sliderText_1_2": "Слайд 2 з 4 (Пакети з клейовим клапаном)",
+    "sliderImg_1_3": "/images/bopp_1_3.jpg",
+    "sliderText_1_3": "Слайд 3 з 4 (Пакети з клейовим клапаном)",
+    "sliderImg_1_4": "/images/bopp_1_4.jpg",
+    "sliderText_1_4": "Слайд 4 з 4 (Пакети з клейовим клапаном)"
   },
   {
     "id": "08",
@@ -118,7 +174,19 @@
     "description_detail_2": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Пакети з замком zip-lock – це зручні пакети з міцного поліетилену з поліпропіленовим замком у верхній частині, який складається з двох смужок, що з’єднуються між собою i дозволяють швидко i герметично закрити пакет, після чого, при необхідності, так же просто відкрити його. Надійний замок zip-lock дозволяє неодноразово розстібати i герметично застібати виріб. Вони широко використовуються для пакування, транспортування, а також для зберігання різних товарів. <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Пакети захищають від потрапляння вологи, сторонніх запахів i пилу, пересушування. Додатковою перевагою є прозорість поліетилену, що дозволяє покупцю оцінити стан товару ще до покупки. Дуже часто ці пакети використовують для заморожування харчових продуктів у морозильній камері. Щільний поліетилен захистить продукти від сторонніх запахів, які часто притаманні морозильным камерам. Окрім харчових продуктів, в таких пакетах можна зберігати документи (папери залишаться рівними i чистими, будуть захищені від вологи i пилу) , медичні препарати, предмети особистої гігієни, галантерейні дрібниці i багато інших товарів на ваш розсуд. Також, такі пакети будуть ідеальним рішенням для зберігання ароматних спецій: в них смаки i запахи спецій будуть збережені i не перемішаються між собою. <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b> Товщина: </b> 50 мкм <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b> Фасування: </b> 100 шт. в упаковці",
     "img": "/images/zip.jpg",
     "productImg_1": "/images/zip_1.jpg",
-    "productImg_2": "/images/zip_2.jpg"
+    "productImg_2": "/images/zip_2.jpg",
+    "sliderImg_1_1": "/images/zip_1_1.jpg",
+    "sliderText_1_1": "Слайд 1 з 3 (Пакети з замком-слайдером)",
+    "sliderImg_1_2": "/images/zip_1_2.jpg",
+    "sliderText_1_2": "Слайд 2 з 3 (Пакети з замком-слайдером)",
+    "sliderImg_1_3": "/images/zip_1_3.jpg",
+    "sliderText_1_3": "Слайд 3 з 3 (Пакети з замком-слайдером)",
+    "sliderImg_2_1": "/images/zip_2_1.jpg",
+    "sliderText_2_1": "Слайд 1 з 3 (Пакети з замком zip-lock)",
+    "sliderImg_2_2": "/images/zip_2_2.jpg",
+    "sliderText_2_2": "Слайд 2 з 3 (Пакети з замком zip-lock)",
+    "sliderImg_2_3": "/images/zip_2_3.jpg",
+    "sliderText_2_3": "Слайд 3 з 3 (Пакети з замком zip-lock)"
   },
   {
     "id": "09",
@@ -132,7 +200,25 @@
     "description_detail_2": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Цей вид пакетів виготовляється з рукава поліетилену низького тиску. Особливістю підготовленого рукава є фальці (бічні складки), які після належної обробки формують ручки пакету. <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Всі пакети 'майка' мають наступне стандартне позначення, наприклад: (28+8х2)х47/15, де: <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 28 - ширина пакету в сантиметрах <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 8 - ширина фальця (бічної складки) в сантиметрах <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 47 - повна висота пакету (від дна до краю ручки) в сантиметрах <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 15 - товщина стінки пакету в мікронах",
     "img": "/images/mayka.jpg",
     "productImg_1": "/images/mayka_1.jpg",
-    "productImg_2": "/images/mayka_2.jpg"
+    "productImg_2": "/images/mayka_2.jpg",
+    "sliderImg_1_1": "/images/mayka_1_1.jpg",
+    "sliderText_1_1": "Слайд 1 з 5 Майка у синю смужку (44+8х2)х70/15",
+    "sliderImg_1_2": "/images/mayka_1_2.jpg",
+    "sliderText_1_2": "Слайд 2 з 5 Майка чорна «Saeedoff» (38+8х2)х60/15",
+    "sliderImg_1_3": "/images/mayka_1_3.jpg",
+    "sliderText_1_3": "Слайд 3 з 5 Майка «Бджілка» (28+8х2)х47/15",
+    "sliderImg_1_4": "/images/mayka_1_4.jpg",
+    "sliderText_1_4": "Слайд 4 з 5 Майка «Козак» (22+8х2)х43/15",
+    "sliderImg_1_5": "/images/mayka_1_5.jpg",
+    "sliderText_1_5": "Слайд 5 з 5 Майка «Luxe» 200 шт (24х42)",
+    "sliderImg_2_1": "/images/mayka_2_1.jpg",
+    "sliderText_2_1": "Слайд 1 з 4 (Пакети типу - «майка»)",
+    "sliderImg_2_2": "/images/mayka_2_2.jpg",
+    "sliderText_2_2": "Слайд 2 з 4 (Пакети типу - «майка»)",
+    "sliderImg_2_3": "/images/mayka_2_3.jpg",
+    "sliderText_2_3": "Слайд 3 з 4 (Пакети типу - «майка»)",
+    "sliderImg_2_4": "/images/mayka_2_4.jpg",
+    "sliderText_2_4": "Слайд 4 з 4 (Пакети типу - «майка»)"
   },
   {
     "id": "10",
@@ -146,7 +232,19 @@
     "description_detail_2": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Баул поліпропіленовий – дуже місткий великий мішок. Використовується, в основному, для транспортування i зберігання об’ємних вантажів. Легкий, місткий, достатньо міцний. Мішки з пропілену мають широкий спектр застосування, як у промисловості, торгівлі, будівництві, так i в сільському господарстві. <br /> &nbsp;&nbsp;&nbsp; Ширина 100 см, <br /> &nbsp;&nbsp;&nbsp; Довжина 150 см, <br /> &nbsp;&nbsp;&nbsp ;Матеріал - поліпропілен.",
     "img": "/images/baul.jpg",
     "productImg_1": "/images/baul_1.jpg",
-    "productImg_2": "/images/baul_2.jpg"
+    "productImg_2": "/images/baul_2.jpg",
+    "sliderImg_1_1": "/images/baul_1_1.jpg",
+    "sliderText_1_1": "Слайд 1 з 4 (Поліпропіленові мішки)",
+    "sliderImg_1_2": "/images/baul_1_2.jpg",
+    "sliderText_1_2": "Слайд 2 з 4 (Поліпропіленові мішки)",
+    "sliderImg_1_3": "/images/baul_1_3.jpg",
+    "sliderText_1_3": "Слайд 3 з 4 (Поліпропіленові мішки)",
+    "sliderImg_1_4": "/images/baul_1_4.jpg",
+    "sliderText_1_4": "Слайд 4 з 4 (Поліпропіленові мішки)",
+    "sliderImg_2_1": "/images/baul_2_1.jpg",
+    "sliderText_2_1": "Слайд 1 з 2 (Баул поліпропіленовий)",
+    "sliderImg_2_2": "/images/baul_2_2.jpg",
+    "sliderText_2_2": "Слайд 2 з 2 (Баул поліпропіленовий)"
   },
   {
     "id": "11",
@@ -157,7 +255,13 @@
     "description": "Пакети з поліетиленової плівки високого тиску (ПЕВТ) для пакування.",
     "description_detail_1": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Пакети з поліетиленової плівки високого тиску (ПЕВТ) підходять для пакування i зберігання різноманітних товарів: одягу, взуття, сумок, рюкзаків i т.д. Підходять для зберігання харчових продуктів. Вони прозорі, гладкі, блискучі, що дозволяє надати запакованому товару презентабельний вигляд. При цьому вони достатньо добре тягнуться, не мнуться i не шелестять.",
     "img": "/images/paket.jpg",
-    "productImg_1": "/images/paket_1.jpg"
+    "productImg_1": "/images/paket_1.jpg",
+    "sliderImg_1_1": "/images/paket_1_1.jpg",
+    "sliderText_1_1": "Слайд 1 з 3 (Пакети з поліетиленової плівки)",
+    "sliderImg_1_2": "/images/paket_1_2.jpg",
+    "sliderText_1_2": "Слайд 2 з 3 (Пакети з поліетиленової плівки)",
+    "sliderImg_1_3": "/images/paket_1_3.jpg",
+    "sliderText_1_3": "Слайд 3 з 3 (Пакети з поліетиленової плівки)"
   },
   {
     "id": "12",
@@ -171,6 +275,18 @@
     "description_detail_2": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Нет описания",
     "img": "/images/no_image_1.jpg",
     "productImg_1": "/images/no_image_1.jpg",
-    "productImg_2": "/images/no_image_2.jpg"
+    "productImg_2": "/images/no_image_2.jpg",
+    "sliderImg_1_1": "/images/no_image_2.jpg",
+    "sliderText_1_1": "Слайд 1 з 3 (назва слайду)",
+    "sliderImg_1_2": "/images/no_image_2.jpg",
+    "sliderText_1_2": "Слайд 2 з 3 (назва слайду)",
+    "sliderImg_1_3": "/images/no_image_2.jpg",
+    "sliderText_1_3": "Слайд 3 з 3 (назва слайду)",
+    "sliderImg_2_1": "/images/no_image_2.jpg",
+    "sliderText_2_1": "Слайд 1 з 3 (назва слайду)",
+    "sliderImg_2_2": "/images/no_image_2.jpg",
+    "sliderText_2_2": "Слайд 2 з 3 (назва слайду)",
+    "sliderImg_2_3": "/images/no_image_2.jpg",
+    "sliderText_2_3": "Слайд 3 з 3 (назва слайду)"
   }
 ]
