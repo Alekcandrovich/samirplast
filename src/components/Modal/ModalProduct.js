@@ -67,7 +67,16 @@ const ModalProduct = ({ images, closeModal }) => {
                   width: '100%',
                 }}
               >
-                {imageData.text}
+                {imageData.text.includes('(') ? (
+                  <>
+                    {imageData.text.substring(0, imageData.text.indexOf('('))}
+                    <span style={{ fontWeight: 'bold', color: 'red' }}>
+                      {imageData.text.substring(imageData.text.indexOf('('))}
+                    </span>
+                  </>
+                ) : (
+                  imageData.text
+                )}
               </p>
             </div>
           ))}
