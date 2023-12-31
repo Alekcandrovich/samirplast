@@ -184,7 +184,7 @@ const ProductDetail = ({ product }) => {
 
     for (let index = 1; index <= 5; index++) {
       const imageSrc = product[`${prefix}${index}`];
-      const text = product[`${prefix}Text_${index}`];
+      const text = product[`${prefix}T${index}`];
 
       if (imageSrc) {
         sliderImages.push({
