@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/samirplast/static/css/main.62dcbab8.css",
-    "main.js": "/samirplast/static/js/main.032bac9d.js",
+    "main.css": "/samirplast/static/css/main.37a76dc0.css",
+    "main.js": "/samirplast/static/js/main.21844b8d.js",
     "static/media/map.jpg": "/samirplast/static/media/map.de2252e87395598b2578.jpg",
     "static/media/general_1400.jpg": "/samirplast/static/media/general_1400.d3fc1c2985a3bbb38c01.jpg",
     "static/media/general_768.jpg": "/samirplast/static/media/general_768.1f87b831f92285d13404.jpg",
@@ -12,11 +12,11 @@
     "static/media/slick.ttf": "/samirplast/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/samirplast/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/samirplast/index.html",
-    "main.62dcbab8.css.map": "/samirplast/static/css/main.62dcbab8.css.map",
-    "main.032bac9d.js.map": "/samirplast/static/js/main.032bac9d.js.map"
+    "main.37a76dc0.css.map": "/samirplast/static/css/main.37a76dc0.css.map",
+    "main.21844b8d.js.map": "/samirplast/static/js/main.21844b8d.js.map"
   },
   "entrypoints": [
-    "static/css/main.62dcbab8.css",
-    "static/js/main.032bac9d.js"
+    "static/css/main.37a76dc0.css",
+    "static/js/main.21844b8d.js"
   ]
 }
