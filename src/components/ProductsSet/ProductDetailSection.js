@@ -1,4 +1,3 @@
-// ProductDetailSection.js
 import React from 'react';
 
 const ProductDetailSection = ({

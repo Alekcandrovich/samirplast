@@ -1,4 +1,3 @@
-// ModalProduct.js
 import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -35,11 +34,11 @@ const ModalProduct = ({ images, closeModal }) => {
       <div className="modal-product">
         <button
           type="button"
-          className="close-modal close-position"
+          className="close-modal"
           onClick={closeModal}
         >
           <svg className="icon-modal">
-            <use href="./icons.svg#close"></use>
+            <use xlinkHref="./icons.svg#close"></use>
           </svg>
         </button>
         <Slider {...settings}>
