@@ -179,17 +179,37 @@ const ProductDetail = ({ product }) => {
     setImages([]);
   };
 
+  // const createSliderImages = (product, prefix) => {
+  //   const sliderImages = [];
+
+  //   for (let index = 1; index <= 5; index++) {
+  //     const imageSrc = product[`${prefix}${index}`];
+  //     const text = product[`${prefix}T${index}`];
+
+  //     if (imageSrc) {
+  //       sliderImages.push({
+  //         imageSrc: `${process.env.PUBLIC_URL}${imageSrc}`,
+  //         text: `${text}`,
+  //       });
+  //     }
+  //   }
+
+  //   return sliderImages;
+  // };
+
   const createSliderImages = (product, prefix) => {
     const sliderImages = [];
 
     for (let index = 1; index <= 5; index++) {
       const imageSrc = product[`${prefix}${index}`];
-      const text = product[`${prefix}T${index}`];
+      // Исправлено здесь: необходимо использовать 'sliderText', а не 'sliderImgT'
+      const textKey = `${prefix.replace('Img', 'Text')}${index}`;
+      const text = product[textKey];
 
       if (imageSrc) {
         sliderImages.push({
           imageSrc: `${process.env.PUBLIC_URL}${imageSrc}`,
-          text: `${text}`,
+          text: text, // Используем переменную text, которая хранит правильное значение
         });
       }
     }
