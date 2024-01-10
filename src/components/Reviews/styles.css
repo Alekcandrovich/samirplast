@@ -1,0 +1,41 @@
+.Reviews {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.Reviews h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.Reviews form {
+  margin-bottom: 20px;
+}
+
+.Reviews label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Reviews input,
+.Reviews textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.Reviews button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.Reviews button:hover {
+  background-color: #0056b3;
+}
+
+.Reviews p {
+  margin-bottom: 10px;
+}

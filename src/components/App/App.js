@@ -5,6 +5,7 @@ import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import Reviews from '../Reviews/Reviews';
 
 import Home from '../../pages/Home/Home';
 import Product from '../../pages/Product/Product';
@@ -45,6 +46,7 @@ const App = () => (
         <Route path="/products/streych" element={<Streych />} />
         <Route path="/products/trempel" element={<Trempel />} />
         <Route path="/products/zip" element={<Zip />} />
+        <Route path="/reviews" element={<Reviews />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
