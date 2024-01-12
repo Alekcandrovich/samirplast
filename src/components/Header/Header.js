@@ -1,26 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { NavLink } from 'react-router-dom';
 import icons from './icons.svg';
 import './styles.css';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 0);
-    };
+  const handleScroll = () => {
+    const scrollPosition =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    setIsScrolled(scrollPosition > 0);
+  };
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+  const closeMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(false);
   }, []);
 
-  const headerClassName = `header${isScrolled ? ' fixed' : ''}`;
+  const handleEscapeKey = useCallback(
+    event => {
+      if (event.key === 'Escape') {
+        closeMobileMenu();
+      }
+    },
+    [closeMobileMenu]
+  );
 
+  useEffect(() => {
+    document.addEventListener('scroll', handleScroll);
+    document.addEventListener('keydown', handleEscapeKey);
+
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [handleEscapeKey]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const headerClassName = `header${isScrolled ? ' fixed' : ''}`;
   const activeLink = 'nav__link nav__link--current';
   const normalLink = 'nav__link';
 
@@ -100,8 +120,11 @@ const Header = () => {
       <div className="menu-toggle__posicion">
         <button
           type="button"
-          className="menu-toggle js-open-menu"
-          aria-expanded="false"
+          className={`menu-toggle js-open-menu${
+            isMobileMenuOpen ? ' active' : ''
+          }`}
+          aria-expanded={isMobileMenuOpen}
+          onClick={toggleMobileMenu}
         >
           <svg
             className="menu-icon__menu"
@@ -111,73 +134,90 @@ const Header = () => {
           </svg>
         </button>
       </div>
-      <div className="menu-container js-menu-container" id="menu-container">
-        <button type="button" className="menu-toggle js-close-menu">
-          <svg
-            className="menu-icon__close"
-            aria-label="кнопка закрытия мобильного меню"
+      {isMobileMenuOpen && (
+        <div
+          className={`menu-container js-menu-container${
+            isMobileMenuOpen ? ' is-open' : ''
+          }`}
+          id="menu-container"
+        >
+          <button
+            type="button"
+            className="menu-toggle js-close-menu"
+            onClick={closeMobileMenu}
           >
-            <use xlinkHref={`${icons}#close_40`} className="icon-menu" />
-          </svg>
-        </button>
-        <ul>
-          <li className="nav__menu">
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            <svg
+              className="menu-icon__close"
+              aria-label="кнопка закрытия мобильного меню"
             >
-              Головна
-            </NavLink>
-          </li>
-          <li className="nav__menu">
-            <NavLink
-              to="/product"
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              Продукцiя
-            </NavLink>
-          </li>
-          <li className="nav__menu">
-            <NavLink
-              to="/contact"
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              Контакти
-            </NavLink>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="tel:+380632882888" className="contact__icon tel">
-              +38 063 288 28 88
-            </a>
-          </li>
-          <li>
-            <a href="mailto:samirplast@i.ua" className="contact__icon mailto">
-              samirplast@i.ua
-            </a>
-          </li>
-        </ul>
-        <ul className="menu__network">
-          <li>
-            <a href="https://www.instagram.com/" className="menu__social">
-              Instagram
-            </a>
-            <span className="menu__span">|</span>
-          </li>
-          <li>
-            <a href="https://www.twitter.com/" className="menu__social">
-              Twitter
-            </a>
-            <span className="menu__span">|</span>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/" className="menu__social">
-              Facebook
-            </a>
-          </li>
-        </ul>
-      </div>
+              <use xlinkHref={`${icons}#close_40`} className="icon-menu" />
+            </svg>
+          </button>
+          <ul>
+            <li className="nav__menu">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                Головна
+              </NavLink>
+            </li>
+            <li className="nav__menu">
+              <NavLink
+                to="/product"
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                Продукцiя
+              </NavLink>
+            </li>
+            <li className="nav__menu">
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                Контакти
+              </NavLink>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="tel:+380632882888" className="contact__icon tel">
+                +38 063 288 28 88
+              </a>
+            </li>
+            <li>
+              <a href="mailto:samirplast@i.ua" className="contact__icon mailto">
+                samirplast@i.ua
+              </a>
+            </li>
+          </ul>
+          <ul className="menu__network">
+            <li>
+              <a href="https://www.instagram.com/" className="menu__social">
+                Instagram
+              </a>
+              <span className="menu__span">|</span>
+            </li>
+            <li>
+              <a href="https://www.twitter.com/" className="menu__social">
+                Twitter
+              </a>
+              <span className="menu__span">|</span>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/" className="menu__social">
+                Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </header>
   );
 };
