@@ -26,6 +26,10 @@ const Header = () => {
     [closeMobileMenu]
   );
 
+  const handleNavLinkClick = () => {
+    closeMobileMenu();
+  };
+
   useEffect(() => {
     document.addEventListener('scroll', handleScroll);
     document.addEventListener('keydown', handleEscapeKey);
@@ -59,6 +63,7 @@ const Header = () => {
                   className={({ isActive }) =>
                     isActive ? activeLink : normalLink
                   }
+                  onClick={handleNavLinkClick}
                 >
                   Головна
                 </NavLink>
@@ -69,6 +74,7 @@ const Header = () => {
                   className={({ isActive }) =>
                     isActive ? activeLink : normalLink
                   }
+                  onClick={handleNavLinkClick}
                 >
                   Продукцiя
                 </NavLink>
@@ -79,6 +85,7 @@ const Header = () => {
                   className={({ isActive }) =>
                     isActive ? activeLink : normalLink
                   }
+                  onClick={handleNavLinkClick}
                 >
                   Контакти
                 </NavLink>
@@ -89,6 +96,7 @@ const Header = () => {
                   className={({ isActive }) =>
                     isActive ? activeLink : normalLink
                   }
+                  onClick={handleNavLinkClick}
                 >
                   Отзывы
                 </NavLink>
@@ -160,6 +168,7 @@ const Header = () => {
                 className={({ isActive }) =>
                   isActive ? activeLink : normalLink
                 }
+                onClick={handleNavLinkClick}
               >
                 Головна
               </NavLink>
@@ -170,6 +179,7 @@ const Header = () => {
                 className={({ isActive }) =>
                   isActive ? activeLink : normalLink
                 }
+                onClick={handleNavLinkClick}
               >
                 Продукцiя
               </NavLink>
@@ -180,6 +190,7 @@ const Header = () => {
                 className={({ isActive }) =>
                   isActive ? activeLink : normalLink
                 }
+                onClick={handleNavLinkClick}
               >
                 Контакти
               </NavLink>
