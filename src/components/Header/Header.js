@@ -90,7 +90,7 @@ const Header = () => {
                   Контакти
                 </NavLink>
               </li>
-              {/* <li className="nav__item">
+              <li className="nav__item">
                 <NavLink
                   to="/reviews"
                   className={({ isActive }) =>
@@ -100,7 +100,7 @@ const Header = () => {
                 >
                   Отзывы
                 </NavLink>
-              </li> */}
+              </li>
             </ul>
           </div>
         </nav>
