@@ -30,9 +30,11 @@ const ModalProduct = ({ images, closeModal }) => {
     };
 
     document.body.addEventListener('keydown', closeOnEsc);
+    document.body.style.overflow = 'hidden';
 
     return () => {
       document.body.removeEventListener('keydown', closeOnEsc);
+      document.body.style.overflow = 'auto';
     };
   }, [closeModal]);
 
