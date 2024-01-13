@@ -29,11 +29,19 @@ const ModalProduct = ({ images, closeModal }) => {
       }
     };
 
+    const closeOnClickOutside = event => {
+      if (event.target.classList.contains('modal-overlay')) {
+        closeModal();
+      }
+    };
+
     document.body.addEventListener('keydown', closeOnEsc);
+    document.body.addEventListener('click', closeOnClickOutside);
     document.body.style.overflow = 'hidden';
 
     return () => {
       document.body.removeEventListener('keydown', closeOnEsc);
+      document.body.removeEventListener('click', closeOnClickOutside);
       document.body.style.overflow = 'auto';
     };
   }, [closeModal]);
@@ -51,8 +59,8 @@ const ModalProduct = ({ images, closeModal }) => {
   };
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-product">
+    <div className="modal-overlay" onClick={closeModal}>
+      <div className="modal-product" onClick={e => e.stopPropagation()}>
         <button type="button" className="close-modal" onClick={closeModal}>
           <svg className="icon-modal">
             <use xlinkHref={`${icons}#close`} />
