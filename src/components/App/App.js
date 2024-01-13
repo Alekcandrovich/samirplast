@@ -23,10 +23,8 @@ import Streych from '../../pages/Products/Streych';
 import Trempel from '../../pages/Products/Trempel';
 import Zip from '../../pages/Products/Zip';
 
-import './App.css';
-
 const App = () => (
-  <div className="App">
+  <>
     <Router basename="/samirplast">
       <ScrollToTop />
       <Header />
@@ -51,7 +49,7 @@ const App = () => (
       </Routes>
       <Footer />
     </Router>
-  </div>
+  </>
 );
 
 export default App;
