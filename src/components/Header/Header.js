@@ -124,111 +124,114 @@ const Header = () => {
             </li>
           </ul>
         </div>
-      </div>
-      <div className="menu-toggle__posicion">
-        <button
-          type="button"
-          className={`menu-toggle js-open-menu${
-            isMobileMenuOpen ? ' active' : ''
-          }`}
-          aria-expanded={isMobileMenuOpen}
-          onClick={toggleMobileMenu}
-        >
-          <svg
-            className="menu-icon__menu"
-            aria-label="кнопка открытия мобильного меню"
-          >
-            <use xlinkHref={`${icons}#menu_40`} className="icon-menu" />
-          </svg>
-        </button>
-      </div>
-      {isMobileMenuOpen && (
-        <div
-          className={`menu-container js-menu-container${
-            isMobileMenuOpen ? ' is-open' : ''
-          }`}
-          id="menu-container"
-        >
+        <div className="menu-toggle__posicion">
           <button
             type="button"
-            className="menu-toggle js-close-menu"
-            onClick={closeMobileMenu}
+            className={`menu-toggle js-open-menu${
+              isMobileMenuOpen ? ' active' : ''
+            }`}
+            aria-expanded={isMobileMenuOpen}
+            onClick={toggleMobileMenu}
           >
             <svg
-              className="menu-icon__close"
-              aria-label="кнопка закрытия мобильного меню"
+              className="menu-icon__menu"
+              aria-label="кнопка открытия мобильного меню"
             >
-              <use xlinkHref={`${icons}#close_40`} className="icon-menu" />
+              <use xlinkHref={`${icons}#menu_40`} className="icon-menu" />
             </svg>
           </button>
-          <ul>
-            <li className="nav__menu">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? activeLink : normalLink
-                }
-                onClick={handleNavLinkClick}
-              >
-                Головна
-              </NavLink>
-            </li>
-            <li className="nav__menu">
-              <NavLink
-                to="/product"
-                className={({ isActive }) =>
-                  isActive ? activeLink : normalLink
-                }
-                onClick={handleNavLinkClick}
-              >
-                Продукцiя
-              </NavLink>
-            </li>
-            <li className="nav__menu">
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  isActive ? activeLink : normalLink
-                }
-                onClick={handleNavLinkClick}
-              >
-                Контакти
-              </NavLink>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="tel:+380632882888" className="contact__icon tel">
-                +38 063 288 28 88
-              </a>
-            </li>
-            <li>
-              <a href="mailto:samirplast@i.ua" className="contact__icon mailto">
-                samirplast@i.ua
-              </a>
-            </li>
-          </ul>
-          <ul className="menu__network">
-            <li>
-              <a href="https://www.instagram.com/" className="menu__social">
-                Instagram
-              </a>
-              <span className="menu__span">|</span>
-            </li>
-            <li>
-              <a href="https://www.twitter.com/" className="menu__social">
-                Twitter
-              </a>
-              <span className="menu__span">|</span>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/" className="menu__social">
-                Facebook
-              </a>
-            </li>
-          </ul>
         </div>
-      )}
+        {isMobileMenuOpen && (
+          <div
+            className={`menu-container js-menu-container${
+              isMobileMenuOpen ? ' is-open' : ''
+            }`}
+            id="menu-container"
+          >
+            <button
+              type="button"
+              className="menu-toggle js-close-menu"
+              onClick={closeMobileMenu}
+            >
+              <svg
+                className="menu-icon__close"
+                aria-label="кнопка закрытия мобильного меню"
+              >
+                <use xlinkHref={`${icons}#close_40`} className="icon-menu" />
+              </svg>
+            </button>
+            <ul>
+              <li className="nav__menu">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                  onClick={handleNavLinkClick}
+                >
+                  Головна
+                </NavLink>
+              </li>
+              <li className="nav__menu">
+                <NavLink
+                  to="/product"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                  onClick={handleNavLinkClick}
+                >
+                  Продукцiя
+                </NavLink>
+              </li>
+              <li className="nav__menu">
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                  onClick={handleNavLinkClick}
+                >
+                  Контакти
+                </NavLink>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="tel:+380632882888" className="contact__icon tel">
+                  +38 063 288 28 88
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:samirplast@i.ua"
+                  className="contact__icon mailto"
+                >
+                  samirplast@i.ua
+                </a>
+              </li>
+            </ul>
+            <ul className="menu__network">
+              <li>
+                <a href="https://www.instagram.com/" className="menu__social">
+                  Instagram
+                </a>
+                <span className="menu__span">|</span>
+              </li>
+              <li>
+                <a href="https://www.twitter.com/" className="menu__social">
+                  Twitter
+                </a>
+                <span className="menu__span">|</span>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/" className="menu__social">
+                  Facebook
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
     </header>
   );
 };
