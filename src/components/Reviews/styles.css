@@ -91,11 +91,3 @@
 .slide-arrow:focus {
   color: var(--color-nav-link);
 }
-
-
-
-
-.slick-arrow,
-.slick-prev {
-  padding: 140px;
-}
