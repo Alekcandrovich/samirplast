@@ -39,3 +39,57 @@
 .Reviews p {
   margin-bottom: 10px;
 }
+
+
+
+.slide {
+  /* position: relative; */
+  /* Добавлено */
+  margin-top: 20px;
+}
+
+/* .slider-container {
+  position: relative;
+} */
+
+.slide-arrow {
+  /* position: absolute; */
+  /* Изменено */
+  top: 50%;
+  /* Изменено */
+  transform: translateY(-50%);
+  /* Изменено */
+  width: 40px;
+  height: 40px;
+  background-color: var(--background-general);
+  color: var(--color-general);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-backdrop);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color var(--transition-timing) var(--transition-duration);
+  z-index: 1;
+}
+
+.slide-arrow.prev {
+  left: 5px;
+}
+
+.slide-arrow.next {
+  right: 5px;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+  color: var(--color-nav-link);
+}
+
+
+
+
+.slick-arrow,
+.slick-prev {
+  padding: 140px;
+}
