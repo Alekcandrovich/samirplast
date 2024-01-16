@@ -54,10 +54,10 @@ const Reviews = ({ reviews, setReviews }) => {
 
   return (
     <div className="Reviews">
-      <h2>Отзывы</h2>
+      <h2>ВІДГУКИ</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Имя:
+          Ім'я:
           <input
             type="text"
             name="name"
@@ -67,7 +67,7 @@ const Reviews = ({ reviews, setReviews }) => {
         </label>
         <br />
         <label>
-          Комментарий:
+          Коментар:
           <textarea
             name="comment"
             value={newReview.comment}
