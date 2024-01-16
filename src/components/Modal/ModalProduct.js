@@ -51,7 +51,7 @@ const ModalProduct = ({ images, closeModal }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     infinite: true,
     pauseOnHover: false,
     prevArrow: <PrevArrow />,
