@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/samirplast/static/css/main.970f3805.css",
-    "main.js": "/samirplast/static/js/main.474fbc12.js",
+    "main.css": "/samirplast/static/css/main.a0da8839.css",
+    "main.js": "/samirplast/static/js/main.c9674bad.js",
     "static/media/map.jpg": "/samirplast/static/media/map.de2252e87395598b2578.jpg",
     "static/media/general_1400.jpg": "/samirplast/static/media/general_1400.d3fc1c2985a3bbb38c01.jpg",
     "static/media/general_768.jpg": "/samirplast/static/media/general_768.1f87b831f92285d13404.jpg",
@@ -12,11 +12,11 @@
     "static/media/slick.ttf": "/samirplast/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/samirplast/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/samirplast/index.html",
-    "main.970f3805.css.map": "/samirplast/static/css/main.970f3805.css.map",
-    "main.474fbc12.js.map": "/samirplast/static/js/main.474fbc12.js.map"
+    "main.a0da8839.css.map": "/samirplast/static/css/main.a0da8839.css.map",
+    "main.c9674bad.js.map": "/samirplast/static/js/main.c9674bad.js.map"
   },
   "entrypoints": [
-    "static/css/main.970f3805.css",
-    "static/js/main.474fbc12.js"
+    "static/css/main.a0da8839.css",
+    "static/js/main.c9674bad.js"
   ]
 }
