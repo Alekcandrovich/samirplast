@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchReviewsApi, addReviewApi } from '../../api/api';
 import './styles.css';
 
-const Reviews = () => {
-  const [reviews, setReviews] = useState([]);
+const Reviews = ({ reviews, setReviews }) => {
   const [newReview, setNewReview] = useState({ name: '', comment: '' });
 
   useEffect(() => {
@@ -18,7 +17,7 @@ const Reviews = () => {
     };
 
     fetchReviews();
-  }, []);
+  }, [setReviews]);
 
   const handleInputChange = e => {
     const { name, value } = e.target;

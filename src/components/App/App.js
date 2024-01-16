@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'modern-normalize';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
@@ -23,14 +23,22 @@ import Streych from '../../pages/Products/Streych';
 import Trempel from '../../pages/Products/Trempel';
 import Zip from '../../pages/Products/Zip';
 
-const App = () => (
-  <>
+const App = () => {
+  const [reviews, setReviews] = useState([]);
+
+  return (
     <Router basename="/samirplast">
       <ScrollToTop />
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
+        <Route
+          path="/"
+          element={<Home reviews={reviews} setReviews={setReviews} />}
+        />
+        <Route
+          path="/product"
+          element={<Product reviews={reviews} setReviews={setReviews} />}
+        />
         <Route path="/contact" element={<Contact />} />
         <Route path="/products/baul" element={<Baul />} />
         <Route path="/products/bopp" element={<Bopp />} />
@@ -44,12 +52,15 @@ const App = () => (
         <Route path="/products/streych" element={<Streych />} />
         <Route path="/products/trempel" element={<Trempel />} />
         <Route path="/products/zip" element={<Zip />} />
-        <Route path="/reviews" element={<Reviews />} />
-        <Route path="*" element={<Home />} />
+        <Route
+          path="/reviews"
+          element={<Reviews reviews={reviews} setReviews={setReviews} />}
+        />
+        <Route path="*" element={<Home reviews={reviews} setReviews={setReviews} />} />
       </Routes>
       <Footer />
     </Router>
-  </>
-);
+  );
+};
 
 export default App;

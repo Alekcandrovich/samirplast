@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Reviews from '../../components/Reviews/Reviews';
 import './styles.css';
 import productsData from '../../assets/productsData.json';
 
-const Home = () => {
+const Home = ({ reviews, setReviews }) => {
   return (
     <main>
       <section className="slogan">
@@ -40,6 +41,7 @@ const Home = () => {
           </div>
         </section>
       </div>
+      <Reviews reviews={reviews} setReviews={setReviews} />
     </main>
   );
 };
