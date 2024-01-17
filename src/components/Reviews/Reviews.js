@@ -75,11 +75,11 @@ const Reviews = ({ reviews, setReviews }) => {
           />
         </label>
         <br />
+        <div className="slide">
+          <ReviewsSlider reviews={reviews} />
+        </div>
+        <button type="submit">ДОДАТИ ВІДГУК</button>
       </form>
-      <div className="slide">
-        <ReviewsSlider reviews={reviews} />
-      </div>
-      <button type="submit">Добавить отзыв</button>
     </div>
   );
 };

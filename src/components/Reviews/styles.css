@@ -31,15 +31,37 @@
 }
 
 .Reviews button {
-  background-color: #007bff;
+  /* background-color: #007bff;
   color: #fff;
   padding: 10px;
   border: none;
-  cursor: pointer;
+  cursor: pointer; */
+  display: flex;
+    /* Добавлено свойство display: flex; */
+    justify-content: center;
+    /* Добавлено свойство justify-content: center; */
+    align-items: center;
+    border-radius: 8px;
+    border: none;
+    padding: 2px 150px;
+    margin-right: auto;
+    margin-left: auto;
+    /* Изменено значение margin-left и margin-right */
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    text-align: center;
+    background-color: var(--color-button);
+    color: var(--color-general);
+    box-shadow: var(--color-product-shadow);
+    transition: background-color var(--transition-timing) var(--transition-duration);
+
 }
 
 .Reviews button:hover {
-  background-color: #0056b3;
+  background-color: var(--color-button-link);
 }
 
 .Reviews p {
@@ -49,7 +71,7 @@
 
 
 .slide {
-  /* position: relative; */
+  position: relative;
   /* Добавлено */
   margin-top: 20px;
 }
@@ -59,14 +81,14 @@
 } */
 
 .slide-arrow {
-  /* position: absolute; */
+  position: absolute;
   /* Изменено */
-  top: 50%;
+  /* top: 50%; */
   /* Изменено */
   transform: translateY(-50%);
   /* Изменено */
-  width: 40px;
-  height: 40px;
+  /* width: 10px;
+  height: 10px; */
   background-color: var(--background-general);
   color: var(--color-general);
   display: flex;
@@ -80,14 +102,23 @@
 }
 
 .slide-arrow.prev {
-  left: 5px;
+  left: 55px;
 }
 
 .slide-arrow.next {
-  right: 5px;
+  right: 55px;
 }
 
 .slide-arrow:hover,
 .slide-arrow:focus {
   color: var(--color-nav-link);
 }
+
+
+
+/* .slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+} */

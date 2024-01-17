@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import icons from "../../components/Modal/icons.svg";
 
 const shuffleArray = array => {
   let shuffledArray = [...array];
@@ -15,8 +16,24 @@ const shuffleArray = array => {
 const ReviewsSlider = ({ reviews }) => {
   const shuffledReviews = shuffleArray(reviews);
 
+  const PrevArrow = ({ onClick }) => (
+    <div className="slide-arrow prev" onClick={onClick}>
+      <svg className="icon-modal">
+        <use xlinkHref={`${icons}#left`} />
+      </svg>
+    </div>
+  );
+
+  const NextArrow = ({ onClick }) => (
+    <div className="slide-arrow next" onClick={onClick}>
+      <svg className="icon-modal">
+        <use xlinkHref={`${icons}#right`} />
+      </svg>
+    </div>
+  );
+
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -24,6 +41,8 @@ const ReviewsSlider = ({ reviews }) => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: false,
+    prevArrow: <PrevArrow className="slide-arrow" />,
+    nextArrow: <NextArrow className="slide-arrow" />,
     responsive: [
       {
         breakpoint: 1024,
@@ -43,7 +62,7 @@ const ReviewsSlider = ({ reviews }) => {
   };
 
   return (
-    <Slider {...settings} className="slider-container">
+    <Slider {...settings} className="slide">
       {shuffledReviews.map((review, index) => (
         <div key={index}>
           <p>
