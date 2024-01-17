@@ -2,7 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import icons from "../../components/Modal/icons.svg";
+import icons from "./icons.svg";
+import './styles.css';
 
 const shuffleArray = array => {
   let shuffledArray = [...array];
@@ -17,7 +18,7 @@ const ReviewsSlider = ({ reviews }) => {
   const shuffledReviews = shuffleArray(reviews);
 
   const PrevArrow = ({ onClick }) => (
-    <div className="slide-arrow prev" onClick={onClick}>
+    <div className="slider-arrow prev" onClick={onClick}>
       <svg className="icon-modal">
         <use xlinkHref={`${icons}#left`} />
       </svg>
@@ -25,7 +26,7 @@ const ReviewsSlider = ({ reviews }) => {
   );
 
   const NextArrow = ({ onClick }) => (
-    <div className="slide-arrow next" onClick={onClick}>
+    <div className="slider-arrow next" onClick={onClick}>
       <svg className="icon-modal">
         <use xlinkHref={`${icons}#right`} />
       </svg>
@@ -33,7 +34,6 @@ const ReviewsSlider = ({ reviews }) => {
   );
 
   const settings = {
-    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -41,8 +41,8 @@ const ReviewsSlider = ({ reviews }) => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: false,
-    prevArrow: <PrevArrow className="slide-arrow" />,
-    nextArrow: <NextArrow className="slide-arrow" />,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -62,15 +62,17 @@ const ReviewsSlider = ({ reviews }) => {
   };
 
   return (
-    <Slider {...settings} className="slide">
-      {shuffledReviews.map((review, index) => (
-        <div key={index}>
-          <p>
-            <strong>{review.name}:</strong> {review.comment}
-          </p>
-        </div>
-      ))}
-    </Slider>
+    <div className="slider">
+      <Slider {...settings}>
+        {shuffledReviews.map((review, index) => (
+          <div key={index} className="slide">
+            <p>
+              <strong>{review.name}:</strong> {review.comment}
+            </p>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };
 
