@@ -75,7 +75,7 @@ const Reviews = ({ reviews, setReviews }) => {
           />
         </label>
         <br />
-        <div className="slide">
+        <div>
           <ReviewsSlider reviews={reviews} />
         </div>
         <button type="submit">ДОДАТИ ВІДГУК</button>

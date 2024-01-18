@@ -62,7 +62,7 @@ const ReviewsSlider = ({ reviews }) => {
   };
 
   return (
-    <div className="slider">
+    // <div className="slider">
       <Slider {...settings}>
         {shuffledReviews.map((review, index) => (
           <div key={index} className="slide">
@@ -72,7 +72,7 @@ const ReviewsSlider = ({ reviews }) => {
           </div>
         ))}
       </Slider>
-    </div>
+    // </div>
   );
 };
 

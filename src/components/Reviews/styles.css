@@ -59,17 +59,10 @@
   margin-bottom: 10px;
 }
 
-/* .slide {
-  position: relative;
-  margin-top: 20px;
-} */
-
-/* .slider {
-  position: relative;
-} */
-
 .slider-arrow {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 40px;
   height: 30px;
   background-color: var(--color-button);
