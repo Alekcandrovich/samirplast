@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import ReviewsSlider from './ReviewsSlider';
 import { fetchReviewsApi, addReviewApi } from '../../api/api';
+import { setReviews } from '../../redux/actions';
 import './styles.css';
 
-const Reviews = ({ reviews, setReviews }) => {
+const Reviews = () => {
   const [newReview, setNewReview] = useState({ name: '', comment: '' });
+  const dispatch = useDispatch();
+  const reviews = useSelector(state => state.reviews);
 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
         const response = await fetchReviewsApi();
-        setReviews(response.data);
+        dispatch(setReviews(response.data));
       } catch (error) {
         console.error('Error fetching reviews:', error);
         handleApiError(error);
@@ -18,7 +22,7 @@ const Reviews = ({ reviews, setReviews }) => {
     };
 
     fetchReviews();
-  }, [setReviews]);
+  }, [dispatch]);
 
   const handleInputChange = e => {
     const { name, value } = e.target;
@@ -31,9 +35,10 @@ const Reviews = ({ reviews, setReviews }) => {
     try {
       await addReviewApi(newReview);
       const response = await fetchReviewsApi();
-      setReviews(response.data);
+      dispatch(setReviews(response.data));
     } catch (error) {
       console.error('Error adding review:', error);
+      handleApiError(error);
     }
 
     setNewReview({ name: '', comment: '' });

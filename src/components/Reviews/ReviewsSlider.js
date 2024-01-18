@@ -6,6 +6,11 @@ import icons from "./icons.svg";
 import './styles.css';
 
 const shuffleArray = array => {
+  if (!Array.isArray(array)) {
+    console.error('Input is not an array');
+    return array;
+  }
+
   let shuffledArray = [...array];
   for (let i = shuffledArray.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -15,7 +20,14 @@ const shuffleArray = array => {
 };
 
 const ReviewsSlider = ({ reviews }) => {
-  const shuffledReviews = shuffleArray(reviews);
+  const reviewsArray = Array.isArray(reviews) ? reviews : reviews.reviews || [];
+
+  const shuffledReviews = shuffleArray(reviewsArray);
+
+  if (!Array.isArray(shuffledReviews)) {
+    console.error('shuffledReviews is not an array');
+    return null;
+  }
 
   const PrevArrow = ({ onClick }) => (
     <div className="slider-arrow prev" onClick={onClick}>
@@ -62,15 +74,15 @@ const ReviewsSlider = ({ reviews }) => {
   };
 
   return (
-      <Slider {...settings}>
-        {shuffledReviews.map((review, index) => (
-          <div key={index} className="slide">
-            <p>
-              <strong>{review.name}:</strong> {review.comment}
-            </p>
-          </div>
-        ))}
-      </Slider>
+    <Slider {...settings}>
+      {shuffledReviews.map((review, index) => (
+        <div key={index} className="slide">
+          <p>
+            <strong>{review.name}:</strong> {review.comment}
+          </p>
+        </div>
+      ))}
+    </Slider>
   );
 };
 

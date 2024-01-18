@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import store from '../../redux/store';
 import 'modern-normalize';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
@@ -27,39 +29,44 @@ const App = () => {
   const [reviews, setReviews] = useState([]);
 
   return (
-    <Router basename="/samirplast">
-      <ScrollToTop />
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={<Home reviews={reviews} setReviews={setReviews} />}
-        />
-        <Route
-          path="/product"
-          element={<Product reviews={reviews} setReviews={setReviews} />}
-        />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/products/baul" element={<Baul />} />
-        <Route path="/products/bopp" element={<Bopp />} />
-        <Route path="/products/mayka" element={<Mayka />} />
-        <Route path="/products/meshki" element={<Meshki />} />
-        <Route path="/products/new" element={<New />} />
-        <Route path="/products/odejda" element={<Odejda />} />
-        <Route path="/products/paket" element={<Paket />} />
-        <Route path="/products/Rukav" element={<Rukav />} />
-        <Route path="/products/scotch" element={<Scotch />} />
-        <Route path="/products/streych" element={<Streych />} />
-        <Route path="/products/trempel" element={<Trempel />} />
-        <Route path="/products/zip" element={<Zip />} />
-        <Route
-          path="/reviews"
-          element={<Reviews reviews={reviews} setReviews={setReviews} />}
-        />
-        <Route path="*" element={<Home reviews={reviews} setReviews={setReviews} />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <Provider store={store}>
+      <Router basename="/samirplast">
+        <ScrollToTop />
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home reviews={reviews} setReviews={setReviews} />}
+          />
+          <Route
+            path="/product"
+            element={<Product reviews={reviews} setReviews={setReviews} />}
+          />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/products/baul" element={<Baul />} />
+          <Route path="/products/bopp" element={<Bopp />} />
+          <Route path="/products/mayka" element={<Mayka />} />
+          <Route path="/products/meshki" element={<Meshki />} />
+          <Route path="/products/new" element={<New />} />
+          <Route path="/products/odejda" element={<Odejda />} />
+          <Route path="/products/paket" element={<Paket />} />
+          <Route path="/products/Rukav" element={<Rukav />} />
+          <Route path="/products/scotch" element={<Scotch />} />
+          <Route path="/products/streych" element={<Streych />} />
+          <Route path="/products/trempel" element={<Trempel />} />
+          <Route path="/products/zip" element={<Zip />} />
+          <Route
+            path="/reviews"
+            element={<Reviews reviews={reviews} setReviews={setReviews} />}
+          />
+          <Route
+            path="*"
+            element={<Home reviews={reviews} setReviews={setReviews} />}
+          />
+        </Routes>
+        <Footer />
+      </Router>
+    </Provider>
   );
 };
 
