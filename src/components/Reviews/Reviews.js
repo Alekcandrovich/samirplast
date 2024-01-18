@@ -13,6 +13,9 @@ const Reviews = () => {
   const reviews = useSelector(state => state.reviews);
 
   useEffect(() => {
+    const maxRetries = 3;
+    let retries = 0;
+
     const fetchReviews = async () => {
       try {
         const response = await fetchReviewsApi();
@@ -22,6 +25,15 @@ const Reviews = () => {
         console.error('Error fetching reviews:', error);
         setError(error.message);
         setLoading(false);
+
+        if (retries < maxRetries) {
+          retries++;
+          console.log(`Retrying (${retries}/${maxRetries})...`);
+          fetchReviews();
+        } else {
+          console.error('Max retries reached. Unable to fetch reviews.');
+          handleApiError(error);
+        }
       }
     };
 
