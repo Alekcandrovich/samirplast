@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import ReviewsSlider from './ReviewsSlider';
 import { fetchReviewsApi, addReviewApi } from '../../api/api';
 import { setReviews } from '../../redux/actions';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './styles.css';
 
 const Reviews = () => {
@@ -69,10 +71,23 @@ const Reviews = () => {
       console.error('Response data:', error.response.data);
       console.error('Response status:', error.response.status);
       console.error('Response headers:', error.response.headers);
+
+      toast.error('Ошибка при выполнении запроса', {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 5000,
+      });
     } else if (error.request) {
       console.error('No response received:', error.request);
+      toast.error('Ошибка при выполнении запроса', {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 5000,
+      });
     } else {
       console.error('Error setting up the request:', error.message);
+      toast.error('Ошибка при выполнении запроса', {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 5000,
+      });
     }
   };
 
@@ -84,6 +99,7 @@ const Reviews = () => {
       {error && <p>Error: {error}</p>}
       {!loading && !error && (
         <>
+          <ToastContainer />
           <form onSubmit={handleSubmit}>
             <label>
               Ім'я:
