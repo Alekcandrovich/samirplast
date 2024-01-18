@@ -7,7 +7,7 @@ import './styles.css';
 
 const Reviews = () => {
   const [newReview, setNewReview] = useState({ name: '', comment: '' });
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const dispatch = useDispatch();
   const reviews = useSelector(state => state.reviews);
@@ -17,9 +17,10 @@ const Reviews = () => {
     let retries = 0;
 
     const fetchReviews = async () => {
+      setLoading(true);
       try {
-        const response = await fetchReviewsApi();
-        dispatch(setReviews(response.data));
+        const data = await fetchReviewsApi();
+        dispatch(setReviews(data));
         setLoading(false);
       } catch (error) {
         console.error('Error fetching reviews:', error);
@@ -49,12 +50,15 @@ const Reviews = () => {
     e.preventDefault();
 
     try {
+      setLoading(true);
       await addReviewApi(newReview);
-      const response = await fetchReviewsApi();
-      dispatch(setReviews(response.data));
+      const data = await fetchReviewsApi();
+      dispatch(setReviews(data));
     } catch (error) {
       console.error('Error adding review:', error);
       handleApiError(error);
+    } finally {
+      setLoading(false);
     }
 
     setNewReview({ name: '', comment: '' });
