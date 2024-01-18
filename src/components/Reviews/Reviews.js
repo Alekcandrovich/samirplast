@@ -34,7 +34,6 @@ const Reviews = ({ reviews, setReviews }) => {
       setReviews(response.data);
     } catch (error) {
       console.error('Error adding review:', error);
-      handleApiError(error);
     }
 
     setNewReview({ name: '', comment: '' });
