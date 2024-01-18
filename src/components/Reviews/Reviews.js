@@ -25,16 +25,18 @@ const Reviews = () => {
         dispatch(setReviews(data));
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching reviews:', error);
+        console.error('Ошибка при получении отзывов:', error);
         setError(error.message);
         setLoading(false);
 
         if (retries < maxRetries) {
           retries++;
-          console.log(`Retrying (${retries}/${maxRetries})...`);
+          console.log(`Повтор (${retries}/${maxRetries})...`);
           fetchReviews();
         } else {
-          console.error('Max retries reached. Unable to fetch reviews.');
+          console.error(
+            'Достигнуто максимальное количество повторов. Невозможно получить отзывы.'
+          );
           handleApiError(error);
         }
       }
@@ -57,7 +59,7 @@ const Reviews = () => {
       const data = await fetchReviewsApi();
       dispatch(setReviews(data));
     } catch (error) {
-      console.error('Error adding review:', error);
+      console.error('Ошибка при добавлении отзыва:', error);
       handleApiError(error);
     } finally {
       setLoading(false);
@@ -68,22 +70,22 @@ const Reviews = () => {
 
   const handleApiError = error => {
     if (error.response) {
-      console.error('Response data:', error.response.data);
-      console.error('Response status:', error.response.status);
-      console.error('Response headers:', error.response.headers);
+      console.error('Данные ответа:', error.response.data);
+      console.error('Статус ответа:', error.response.status);
+      console.error('Заголовки ответа:', error.response.headers);
 
       toast.error('Ошибка при выполнении запроса', {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 5000,
       });
     } else if (error.request) {
-      console.error('No response received:', error.request);
+      console.error('Не получен ответ:', error.request);
       toast.error('Ошибка при выполнении запроса', {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 5000,
       });
     } else {
-      console.error('Error setting up the request:', error.message);
+      console.error('Ошибка настройки запроса:', error.message);
       toast.error('Ошибка при выполнении запроса', {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 5000,
@@ -95,7 +97,7 @@ const Reviews = () => {
     <div className="Reviews">
       <h2>ВІДГУКИ</h2>
 
-      {loading && <p>Loading...</p>}
+      {loading && <p>Завантаження...</p>}
       {error && <p>Error: {error}</p>}
       {!loading && !error && (
         <>

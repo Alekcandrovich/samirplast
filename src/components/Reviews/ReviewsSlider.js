@@ -7,7 +7,7 @@ import './styles.css';
 
 const shuffleArray = array => {
   if (!Array.isArray(array)) {
-    console.error('Input is not an array');
+    console.error('Входные данные не являются массивом');
     return array;
   }
 
@@ -23,7 +23,7 @@ const ReviewsSlider = ({ reviews }) => {
   const shuffledReviews = shuffleArray(reviews.reviews || []);
 
   if (!Array.isArray(shuffledReviews)) {
-    console.error('shuffledReviews is not an array');
+    console.error('Перемешанные отзывы не является массивом');
     return null;
   }
 
