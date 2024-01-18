@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/samirplast/static/css/main.87460609.css",
-    "main.js": "/samirplast/static/js/main.abd7400c.js",
+    "main.js": "/samirplast/static/js/main.a5448fc9.js",
     "static/media/map.jpg": "/samirplast/static/media/map.de2252e87395598b2578.jpg",
     "static/media/general_1400.jpg": "/samirplast/static/media/general_1400.d3fc1c2985a3bbb38c01.jpg",
     "static/media/general_768.jpg": "/samirplast/static/media/general_768.1f87b831f92285d13404.jpg",
@@ -13,10 +13,10 @@
     "static/media/slick.woff": "/samirplast/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/samirplast/index.html",
     "main.87460609.css.map": "/samirplast/static/css/main.87460609.css.map",
-    "main.abd7400c.js.map": "/samirplast/static/js/main.abd7400c.js.map"
+    "main.a5448fc9.js.map": "/samirplast/static/js/main.a5448fc9.js.map"
   },
   "entrypoints": [
     "static/css/main.87460609.css",
-    "static/js/main.abd7400c.js"
+    "static/js/main.a5448fc9.js"
   ]
 }
