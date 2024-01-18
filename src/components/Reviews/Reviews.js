@@ -7,6 +7,8 @@ import './styles.css';
 
 const Reviews = () => {
   const [newReview, setNewReview] = useState({ name: '', comment: '' });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const dispatch = useDispatch();
   const reviews = useSelector(state => state.reviews);
 
@@ -15,9 +17,11 @@ const Reviews = () => {
       try {
         const response = await fetchReviewsApi();
         dispatch(setReviews(response.data));
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching reviews:', error);
-        handleApiError(error);
+        setError(error.message);
+        setLoading(false);
       }
     };
 
@@ -59,31 +63,38 @@ const Reviews = () => {
   return (
     <div className="Reviews">
       <h2>ВІДГУКИ</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Ім'я:
-          <input
-            type="text"
-            name="name"
-            value={newReview.name}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Коментар:
-          <textarea
-            name="comment"
-            value={newReview.comment}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <div>
-          <ReviewsSlider reviews={reviews} />
-        </div>
-        <button type="submit">ДОДАТИ ВІДГУК</button>
-      </form>
+
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error}</p>}
+      {!loading && !error && (
+        <>
+          <form onSubmit={handleSubmit}>
+            <label>
+              Ім'я:
+              <input
+                type="text"
+                name="name"
+                value={newReview.name}
+                onChange={handleInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              Коментар:
+              <textarea
+                name="comment"
+                value={newReview.comment}
+                onChange={handleInputChange}
+              />
+            </label>
+            <br />
+            <div>
+              <ReviewsSlider reviews={reviews} />
+            </div>
+            <button type="submit">ДОДАТИ ВІДГУК</button>
+          </form>
+        </>
+      )}
     </div>
   );
 };

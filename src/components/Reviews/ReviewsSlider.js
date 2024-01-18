@@ -20,9 +20,7 @@ const shuffleArray = array => {
 };
 
 const ReviewsSlider = ({ reviews }) => {
-  const reviewsArray = Array.isArray(reviews) ? reviews : reviews.reviews || [];
-
-  const shuffledReviews = shuffleArray(reviewsArray);
+  const shuffledReviews = shuffleArray(reviews.reviews || []);
 
   if (!Array.isArray(shuffledReviews)) {
     console.error('shuffledReviews is not an array');
