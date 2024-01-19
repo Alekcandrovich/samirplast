@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setReviews } from '../../redux/actions';
 import { addReviewApi, fetchReviewsApi } from '../../api/api';
+import './styles.css';
 
 const ModalReview = ({ closeModal }) => {
   const [newReview, setNewReview] = useState({ name: '', comment: '' });
@@ -29,7 +30,8 @@ const ModalReview = ({ closeModal }) => {
   };
 
   return (
-    <div className="modal">
+    <div className="modale-backdrop" onClick={closeModal}>
+      <div className="modale-content" onClick={e => e.stopPropagation()}>
       <form onSubmit={handleSubmit}>
         <label>
           Ім'я:
@@ -53,7 +55,9 @@ const ModalReview = ({ closeModal }) => {
         <button type="submit">ВІДПРАВИТИ ВІДГУК</button>
       </form>
     </div>
+    </div>
   );
 };
 
 export default ModalReview;
+
