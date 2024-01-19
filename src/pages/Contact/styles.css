@@ -95,4 +95,5 @@
   height: auto;
   border: 2px solid var(--color-button);
   border-radius: 10px;
+  margin-bottom: 15px;
 }

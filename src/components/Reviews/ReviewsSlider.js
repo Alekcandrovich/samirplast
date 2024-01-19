@@ -46,7 +46,7 @@ const ReviewsSlider = ({ reviews }) => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -72,15 +72,15 @@ const ReviewsSlider = ({ reviews }) => {
   };
 
   return (
-    <Slider {...settings}>
-      {shuffledReviews.map((review, index) => (
-        <div key={index} className="slide">
-          <p>
-            <strong>{review.name}:</strong> {review.comment}
-          </p>
-        </div>
-      ))}
-    </Slider>
+      <Slider {...settings} className="slider">
+        {shuffledReviews.map((review, index) => (
+          <div key={index} className="slide_item">
+            <p>
+              <strong>{review.name}:</strong> {review.comment}
+            </p>
+          </div>
+        ))}
+      </Slider>
   );
 };
 

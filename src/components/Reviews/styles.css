@@ -1,5 +1,5 @@
 .Reviews {
-  max-width: 600px;
+  max-width: 820px;
   margin: 0 auto;
 }
 
@@ -39,6 +39,7 @@
   padding: 2px 120px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 30px;
   cursor: pointer;
   font-size: 12px;
   font-weight: 700;
@@ -55,14 +56,46 @@
   background-color: var(--color-button-link);
 }
 
-.Reviews p {
-  margin-bottom: 10px;
+/* .slider {
+  margin-bottom: 130px;
+} */
+
+.slide_item {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--color-overlay-product);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 150px;
+}
+
+.slide_item p strong {
+  display: block;
+  color: var(--color-general);
+  font-weight: 700;
+  font-size: 14px;
+  position: relative;
+  top: -2px;
+
+}
+
+.slide_item p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.slick-slide {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.slick-track {
+  height: 190px;
 }
 
 .slider-arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
   width: 40px;
   height: 30px;
   background-color: var(--color-button);
