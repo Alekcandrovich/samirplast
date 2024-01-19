@@ -1,18 +1,28 @@
+// Reviews.js
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import ReviewsSlider from './ReviewsSlider';
-import { fetchReviewsApi, addReviewApi } from '../../api/api';
 import { setReviews } from '../../redux/actions';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { fetchReviewsApi } from '../../api/api';
+import ReviewsSlider from './ReviewsSlider';
+import ModalReview from '../../components/Modal/ModalReview';
 import './styles.css';
 
 const Reviews = () => {
-  const [newReview, setNewReview] = useState({ name: '', comment: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch = useDispatch();
   const reviews = useSelector(state => state.reviews);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   useEffect(() => {
     const maxRetries = 3;
@@ -44,29 +54,6 @@ const Reviews = () => {
 
     fetchReviews();
   }, [dispatch]);
-
-  const handleInputChange = e => {
-    const { name, value } = e.target;
-    setNewReview(prevReview => ({ ...prevReview, [name]: value }));
-  };
-
-  const handleSubmit = async e => {
-    e.preventDefault();
-
-    try {
-      setLoading(true);
-      await addReviewApi(newReview);
-      const data = await fetchReviewsApi();
-      dispatch(setReviews(data));
-    } catch (error) {
-      console.error('Ошибка при добавлении отзыва:', error);
-      handleApiError(error);
-    } finally {
-      setLoading(false);
-    }
-
-    setNewReview({ name: '', comment: '' });
-  };
 
   const handleApiError = error => {
     if (error.response) {
@@ -102,31 +89,13 @@ const Reviews = () => {
       {!loading && !error && (
         <>
           <ToastContainer />
-          <form onSubmit={handleSubmit}>
-            <label>
-              Ім'я:
-              <input
-                type="text"
-                name="name"
-                value={newReview.name}
-                onChange={handleInputChange}
-              />
-            </label>
-            <br />
-            <label>
-              Коментар:
-              <textarea
-                name="comment"
-                value={newReview.comment}
-                onChange={handleInputChange}
-              />
-            </label>
-            <br />
-            <div>
-              <ReviewsSlider reviews={reviews} />
-            </div>
-            <button type="submit">ДОДАТИ ВІДГУК</button>
-          </form>
+          <div>
+            <ReviewsSlider reviews={reviews} />
+          </div>
+          <button type="button" onClick={openModal}>
+            ДОДАТИ ВІДГУК
+          </button>
+          {isModalOpen && <ModalReview closeModal={closeModal} />}
         </>
       )}
     </div>

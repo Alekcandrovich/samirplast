@@ -90,17 +90,6 @@ const Header = () => {
                   Контакти
                 </NavLink>
               </li>
-              <li className="nav__item">
-                <NavLink
-                  to="/reviews"
-                  className={({ isActive }) =>
-                    isActive ? activeLink : normalLink
-                  }
-                  onClick={handleNavLinkClick}
-                >
-                  Отзывы
-                </NavLink>
-              </li>
             </ul>
           </div>
         </nav>

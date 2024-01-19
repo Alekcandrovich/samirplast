@@ -60,10 +60,6 @@ const App = () => {
               path="/reviews"
               element={<Reviews reviews={reviews} setReviews={setReviews} />}
             />
-            <Route
-              path="*"
-              element={<Home reviews={reviews} setReviews={setReviews} />}
-            />
           </Routes>
         </Suspense>
         <Footer />
