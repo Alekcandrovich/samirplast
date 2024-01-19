@@ -57,16 +57,16 @@
   transition: color var(--transition-timing) var(--transition-duration);
 }
 
+.close-modal:hover,
+.close-modal:focus {
+  color: var(--color-nav-link);
+}
+
 .icon-modal {
   width: 20px;
   height: 20px;
   fill: currentColor;
   align-items: center;
-}
-
-.close-modal:hover,
-.close-modal:focus {
-  color: var(--color-nav-link);
 }
 
 

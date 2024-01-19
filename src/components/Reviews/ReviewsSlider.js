@@ -72,9 +72,9 @@ const ReviewsSlider = ({ reviews }) => {
   };
 
   return (
-      <Slider {...settings} className="slider">
+      <Slider {...settings}>
         {shuffledReviews.map((review, index) => (
-          <div key={index} className="slide_item">
+          <div key={index} className="slider">
             <p>
               <strong>{review.name}:</strong> {review.comment}
             </p>
