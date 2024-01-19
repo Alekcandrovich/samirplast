@@ -14,8 +14,15 @@ const ModalReview = ({ closeModal }) => {
     setNewReview(prevReview => ({ ...prevReview, [name]: value }));
   };
 
+  const canSubmit =
+    newReview.name.trim() !== '' && newReview.comment.trim() !== '';
+
   const handleSubmit = async e => {
     e.preventDefault();
+
+    if (!canSubmit) {
+      return;
+    }
 
     try {
       await addReviewApi(newReview);
@@ -32,32 +39,37 @@ const ModalReview = ({ closeModal }) => {
   return (
     <div className="modale-backdrop" onClick={closeModal}>
       <div className="modale-content" onClick={e => e.stopPropagation()}>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Ім'я:
-          <input
-            type="text"
-            name="name"
-            value={newReview.name}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Коментар:
-          <textarea
-            name="comment"
-            value={newReview.comment}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <button type="submit">ВІДПРАВИТИ ВІДГУК</button>
-      </form>
-    </div>
+        <button className="close-modal" onClick={closeModal}>
+          &#10005;{' '}
+          {/* Это 'X' символ для кнопки закрытия, вы можете использовать иконку */}
+        </button>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Ім'я:
+            <input
+              type="text"
+              name="name"
+              value={newReview.name}
+              onChange={handleInputChange}
+            />
+          </label>
+          <br />
+          <label>
+            Коментар:
+            <textarea
+              name="comment"
+              value={newReview.comment}
+              onChange={handleInputChange}
+            />
+          </label>
+          <br />
+          <button type="submit" disabled={!canSubmit}>
+            ВІДПРАВИТИ ВІДГУК
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
 
 export default ModalReview;
-
