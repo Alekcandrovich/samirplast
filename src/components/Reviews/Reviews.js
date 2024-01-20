@@ -59,13 +59,10 @@ const Reviews = () => {
       console.error('Данные ответа:', error.response.data);
       console.error('Статус ответа:', error.response.status);
       console.error('Заголовки ответа:', error.response.headers);
-      Notiflix.Notify.failure('Ошибка при выполнении запроса');
     } else if (error.request) {
       console.error('Не получен ответ:', error.request);
-      Notiflix.Notify.failure('Ошибка при выполнении запроса');
     } else {
       console.error('Ошибка настройки запроса:', error.message);
-      Notiflix.Notify.failure('Ошибка при выполнении запроса');
       if (error.message.includes('empty fields')) {
         Notiflix.Notify.failure('Пожалуйста, заполните все поля формы.');
       }
