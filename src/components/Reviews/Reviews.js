@@ -73,7 +73,10 @@ const Reviews = () => {
   };
 
   const addReviewSuccess = () => {
-    Notiflix.Notify.success('Отзыв успешно добавлен!');
+    Notiflix.Notify.success('Отзыв успешно добавлен!',
+      {
+        position: 'center-center'
+      });
   };
 
   return (
