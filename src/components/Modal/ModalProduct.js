@@ -6,16 +6,16 @@ import icons from './icons.svg';
 import './styles.css';
 
 const PrevArrow = ({ onClick }) => (
-  <div className="slide-arrow prev" onClick={onClick}>
-    <svg className="icon-modal">
+  <div className="slide_arrow prev" onClick={onClick}>
+    <svg className="icon_modal">
       <use xlinkHref={`${icons}#left`} />
     </svg>
   </div>
 );
 
 const NextArrow = ({ onClick }) => (
-  <div className="slide-arrow next" onClick={onClick}>
-    <svg className="icon-modal">
+  <div className="slide_arrow next" onClick={onClick}>
+    <svg className="icon_modal">
       <use xlinkHref={`${icons}#right`} />
     </svg>
   </div>
@@ -30,7 +30,7 @@ const ModalProduct = ({ images, closeModal }) => {
     };
 
     const closeOnClickOutside = event => {
-      if (event.target.classList.contains('modal-overlay')) {
+      if (event.target.classList.contains('modal_overlay')) {
         closeModal();
       }
     };
@@ -59,17 +59,17 @@ const ModalProduct = ({ images, closeModal }) => {
   };
 
   return (
-    <div className="modal-overlay" onClick={closeModal}>
-      <div className="modal-product" onClick={e => e.stopPropagation()}>
-        <button type="button" className="close-modal" onClick={closeModal}>
-          <svg className="icon-modal">
+    <div className="modal_overlay" onClick={closeModal}>
+      <div className="modal_product" onClick={e => e.stopPropagation()}>
+        <button type="button" className="close_modal" onClick={closeModal}>
+          <svg className="icon_modal">
             <use xlinkHref={`${icons}#close`} />
           </svg>
         </button>
         <Slider {...settings}>
           {images.map((imageData, index) => (
             <div key={index} className="slide">
-              <img src={imageData.imageSrc} alt={`Slide ${index + 1}`} />
+              <img className="slide_img" src={imageData.imageSrc} alt={`Slide ${index + 1}`} />
               <p
                 style={{
                   textAlign: 'center',

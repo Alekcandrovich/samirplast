@@ -1,8 +1,8 @@
-// ModalReview.js
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setReviews } from '../../redux/actions';
 import { addReviewApi, fetchReviewsApi } from '../../api/api';
+import icons from './icons.svg';
 import './styles.css';
 
 const ModalReview = ({ closeModal }) => {
@@ -37,16 +37,18 @@ const ModalReview = ({ closeModal }) => {
   };
 
   return (
-    <div className="modale-backdrop" onClick={closeModal}>
-      <div className="modale-content" onClick={e => e.stopPropagation()}>
-        <button className="close-modal" onClick={closeModal}>
-          &#10005;{' '}
-          {/* Это 'X' символ для кнопки закрытия, вы можете использовать иконку */}
+    <div className="modale_overlay" onClick={closeModal}>
+      <div className="modale_content" onClick={e => e.stopPropagation()}>
+        <button className="close_modal" onClick={closeModal}>
+          <svg className="icon_modal">
+            <use xlinkHref={`${icons}#close`} />
+          </svg>
         </button>
-        <form onSubmit={handleSubmit}>
-          <label>
+        <form className="reviews_form" onSubmit={handleSubmit}>
+          <label className="reviews_label">
             Ім'я:
             <input
+              className="reviews_input"
               type="text"
               name="name"
               value={newReview.name}
@@ -57,13 +59,18 @@ const ModalReview = ({ closeModal }) => {
           <label>
             Коментар:
             <textarea
+              className="reviews_textarea"
               name="comment"
               value={newReview.comment}
               onChange={handleInputChange}
             />
           </label>
           <br />
-          <button type="submit" disabled={!canSubmit}>
+          <button
+            className="reviews_button"
+            type="submit"
+            disabled={!canSubmit}
+          >
             ВІДПРАВИТИ ВІДГУК
           </button>
         </form>

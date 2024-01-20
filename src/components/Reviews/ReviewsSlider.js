@@ -28,16 +28,16 @@ const ReviewsSlider = ({ reviews }) => {
   }
 
   const PrevArrow = ({ onClick }) => (
-    <div className="slider-arrow prev" onClick={onClick}>
-      <svg className="icon-modal">
+    <div className="slider_arrow prev" onClick={onClick}>
+      <svg className="icon_modal">
         <use xlinkHref={`${icons}#left`} />
       </svg>
     </div>
   );
 
   const NextArrow = ({ onClick }) => (
-    <div className="slider-arrow next" onClick={onClick}>
-      <svg className="icon-modal">
+    <div className="slider_arrow next" onClick={onClick}>
+      <svg className="icon_modal">
         <use xlinkHref={`${icons}#right`} />
       </svg>
     </div>
@@ -72,15 +72,16 @@ const ReviewsSlider = ({ reviews }) => {
   };
 
   return (
-      <Slider {...settings}>
-        {shuffledReviews.map((review, index) => (
-          <div key={index} className="slider">
-            <p>
-              <strong>{review.name}:</strong> {review.comment}
-            </p>
-          </div>
-        ))}
-      </Slider>
+    <Slider {...settings}>
+      {shuffledReviews.map((review, index) => (
+        <div key={index} className="slider">
+          <p className="slider_p">
+            <strong className="slider_strong">{review.name}:</strong>{' '}
+            {review.comment}
+          </p>
+        </div>
+      ))}
+    </Slider>
   );
 };
 

@@ -17,16 +17,16 @@ const ModalPrice = ({ imgSrc, isOpen, onRequestClose }) => {
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel="Image Modal"
-      overlayClassName="modal-overlay"
-      className="modal-content"
+      overlayClassName="modal_overlay"
+      className="modal_content"
     >
-      <button onClick={onRequestClose} className="close-modal">
-        <svg className="icon-modal">
+      <button onClick={onRequestClose} className="close_modal">
+        <svg className="icon_modal">
           <use xlinkHref={`${icons}#close`} />
         </svg>
       </button>
-      <div className="image-container">
-        <img src={imgSrc} alt="ПРАЙС - ЛИСТ" className="modal-image" />
+      <div className="image_container">
+        <img src={imgSrc} alt="ПРАЙС - ЛИСТ" className="modal_image" />
       </div>
     </Modal>
   );

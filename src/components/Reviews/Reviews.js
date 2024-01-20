@@ -80,8 +80,8 @@ const Reviews = () => {
   };
 
   return (
-    <div className="Reviews">
-      <h2>ВІДГУКИ</h2>
+    <div className="reviews">
+      <h2 className="reviews_h2">ВІДГУКИ</h2>
 
       {loading && <p>Завантаження...</p>}
       {error && <p>Error: {error}</p>}
@@ -91,7 +91,7 @@ const Reviews = () => {
           <div>
             <ReviewsSlider reviews={reviews} />
           </div>
-          <button type="button" onClick={openModal}>
+          <button className="reviews_button" type="button" onClick={openModal}>
             ДОДАТИ ВІДГУК
           </button>
           {isModalOpen && <ModalReview closeModal={closeModal} />}

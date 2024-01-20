@@ -1,4 +1,4 @@
-.modal-overlay {
+.modal_overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,7 +8,7 @@
   z-index: 2000;
 }
 
-.modal-content {
+.modal_content {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -25,19 +25,19 @@
   transition: transform var(--transition-timing) var(--transition-duration);
 }
 
-.image-container {
+.image_container {
   overflow-y: auto;
   max-height: calc(100vh - 150px);
   margin-top: 10px;
 }
 
-.modal-image {
+.modal_image {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-.close-modal {
+.close_modal {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -57,12 +57,12 @@
   transition: color var(--transition-timing) var(--transition-duration);
 }
 
-.close-modal:hover,
-.close-modal:focus {
+.close_modal:hover,
+.close_modal:focus {
   color: var(--color-nav-link);
 }
 
-.icon-modal {
+.icon_modal {
   width: 20px;
   height: 20px;
   fill: currentColor;
@@ -75,7 +75,7 @@
 
 /* !---------------Modal Product-------------------------- */
 
-.modal-product {
+.modal_product {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -107,7 +107,7 @@
   margin-top: 20px;
 }
 
-.slide img {
+.slide_img {
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -118,7 +118,7 @@
   object-position: center;
 }
 
-.slide-arrow {
+.slide_arrow {
   position: absolute;
   top: 260px;
   width: 40px;
@@ -135,37 +135,38 @@
   z-index: 1;
 }
 
-.slide-arrow.prev {
+.slide_arrow.prev {
   left: 5px;
 }
 
-.slide-arrow.next {
+.slide_arrow.next {
   right: 5px;
 }
 
-.slide-arrow:hover,
-.slide-arrow:focus {
+.slide_arrow:hover,
+.slide_arrow:focus {
   color: var(--color-nav-link);
 }
 
 /* !---------------Modal Review-------------------------- */
 
-.modale-backdrop {
+.modale_overlay {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1050;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-overlay-body);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.modale-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
+.modale_content {
+  position: relative;
+  background-color: var(--background-slogan);
+  padding: 40px;
+  border-radius: 8px;
   z-index: 1051;
 }

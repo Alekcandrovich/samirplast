@@ -1,9 +1,9 @@
-.Reviews {
+.reviews {
   max-width: 900px;
   margin: 0 auto;
 }
 
-.Reviews h2 {
+.reviews_h2 {
   padding: 0;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -15,23 +15,19 @@
   color: var(--color-general);
 }
 
-.Reviews form {
-  margin-bottom: 20px;
-}
-
-.Reviews label {
+.reviews_label {
   display: block;
-  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
-.Reviews input,
-.Reviews textarea {
+.reviews_input,
+.reviews_textarea {
   width: 100%;
   padding: 8px;
-  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
-.Reviews button {
+.reviews_button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,8 +36,8 @@
   padding: 2px 120px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 10px;
   cursor: pointer;
   font-size: 12px;
   font-weight: 700;
@@ -54,7 +50,7 @@
   transition: background-color var(--transition-timing) var(--transition-duration);
 }
 
-.Reviews button:hover {
+.reviews_button:hover {
   background-color: var(--color-button-link);
 }
 
@@ -65,7 +61,7 @@
   height: 120px;
 }
 
-.slider p strong {
+.slider_strong {
   display: block;
   color: var(--color-general);
   font-weight: 700;
@@ -75,7 +71,7 @@
 
 }
 
-.slider p {
+.slider_p {
   font-size: 14px;
   color: var(--color-last);
 }
@@ -85,7 +81,7 @@
   padding-left: 5px;
 }
 
-.slider-arrow {
+.slider_arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-60%);
@@ -103,20 +99,20 @@
   z-index: 1;
 }
 
-.slider-arrow.prev {
+.slider_arrow.prev {
   left: -50px;
 }
 
-.slider-arrow.next {
+.slider_arrow.next {
   right: -50px;
 }
 
-.slider-arrow:hover,
-.slider-arrow:focus {
+.slider_arrow:hover,
+.slider_arrow:focus {
   background-color: var(--color-button-link);
 }
 
-.icon-modal {
+.icon_modal {
   width: 20px;
   height: 20px;
   fill: currentColor;
