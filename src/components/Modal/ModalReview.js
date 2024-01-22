@@ -385,6 +385,8 @@ const ModalReview = ({ closeModal, onSuccess }) => {
     }
   };
 
+  console.log('Rendering ModalReview...');
+
   return (
     <div className="modal_overlay" onClick={closeModal}>
       <div className="modal_content" onClick={e => e.stopPropagation()}>
