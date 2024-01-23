@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setReviews } from '../../redux/actions';
 import { addReviewApi, fetchReviewsApi } from '../../api/api';
@@ -10,6 +10,30 @@ const ModalReview = ({ closeModal, onSuccess }) => {
   const [newReview, setNewReview] = useState({ name: '', comment: '' });
   const [formErrors, setFormErrors] = useState({});
   const dispatch = useDispatch();
+  const [isModalOpen] = useState(true);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    const handleEsc = event => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    document.addEventListener('keydown', handleEsc);
+
+    return () => {
+      document.body.style.overflow = 'auto';
+      document.removeEventListener('keydown', handleEsc);
+    };
+  }, [isModalOpen, closeModal]);
+
+
 
   const validateForm = () => {
     const errors = {};
@@ -50,9 +74,20 @@ const ModalReview = ({ closeModal, onSuccess }) => {
     }
   };
 
+  const handleKeyDown = e => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  };
+
   return (
     <div className="modale_overlay" onClick={closeModal}>
-      <div className="modale_content" onClick={e => e.stopPropagation()}>
+      <div
+        className="modale_content"
+        onClick={e => e.stopPropagation()}
+        onKeyDown={handleKeyDown}
+        tabIndex="0"
+      >
         <button className="close_modal" onClick={closeModal}>
           <svg className="icon_modal">
             <use xlinkHref={`${icons}#close`} />
@@ -70,9 +105,7 @@ const ModalReview = ({ closeModal, onSuccess }) => {
               onChange={handleInputChange}
             />
             {formErrors.name && (
-              <div style={{ display: 'none' }}>
-                {formErrors.name}
-              </div>
+              <div style={{ display: 'none' }}>{formErrors.name}</div>
             )}
           </label>
           <br />
@@ -86,9 +119,7 @@ const ModalReview = ({ closeModal, onSuccess }) => {
               onChange={handleInputChange}
             />
             {formErrors.comment && (
-              <div style={{ display: 'none' }}>
-                {formErrors.comment}
-              </div>
+              <div style={{ display: 'none' }}>{formErrors.comment}</div>
             )}
           </label>
           <br />
