@@ -1,5 +1,5 @@
 .product_detail {
-  border: 2px solid #c8c8c8;
+  border: 2px solid var(--color-border-product);
   border-radius: 8px;
   padding: 10px;
 }
