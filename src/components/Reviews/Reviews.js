@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setReviews } from '../../redux/actions';
-import Notiflix from 'notiflix';
 import { fetchReviewsApi } from '../../api/api';
 import ReviewsSlider from './ReviewsSlider';
+import Notiflix from 'notiflix';
+import CustomLoader from '../../components/Loader/CustomLoader';
 import ModalReview from '../../components/Modal/ModalReview';
 import './styles.css';
 
@@ -32,7 +33,6 @@ const Reviews = () => {
         const data = await fetchReviewsApi();
         dispatch(setReviews(data));
         setLoading(false);
-
       } catch (error) {
         console.error('Ошибка при получении отзывов:', error);
         setError(error.message);
@@ -80,7 +80,7 @@ const Reviews = () => {
     <div className="reviews">
       <h2 className="reviews_h2">ВІДГУКИ</h2>
 
-      {loading && <p>Завантаження...</p>}
+      {loading && <CustomLoader />}
       {error && <p>Error: {error}</p>}
       {!loading && !error && (
         <>
