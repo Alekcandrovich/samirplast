@@ -170,12 +170,3 @@
   border-radius: 8px;
   z-index: 1051;
 }
-
-
-
-.error-message {
-  color: red;
-  margin-top: 5px;
-    font-size: 0.8em;
-    z-index: 1061;
-}

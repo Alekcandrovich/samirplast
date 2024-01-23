@@ -70,10 +70,10 @@ const Reviews = () => {
   };
 
   const addReviewSuccess = () => {
-    Notiflix.Notify.success('Отзыв успешно добавлен!',
-      {
-        position: 'center-center'
-      });
+    Notiflix.Notify.success('Отзыв успешно добавлен!', {
+      position: 'center-center',
+      timeout: 3000,
+    });
   };
 
   return (

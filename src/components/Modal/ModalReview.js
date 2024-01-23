@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setReviews } from '../../redux/actions';
 import { addReviewApi, fetchReviewsApi } from '../../api/api';
+import Notiflix from 'notiflix';
 import icons from './icons.svg';
 import './styles.css';
 
@@ -13,10 +14,10 @@ const ModalReview = ({ closeModal, onSuccess }) => {
   const validateForm = () => {
     const errors = {};
     if (!newReview.name.trim()) {
-      errors.name = 'Пожалуйста, введите имя.';
+      errors.name = 'Не введено имя.';
     }
     if (!newReview.comment.trim()) {
-      errors.comment = 'Пожалуйста, введите комментарий.';
+      errors.comment = 'Не введен комментарий.';
     }
     return errors;
   };
@@ -41,6 +42,11 @@ const ModalReview = ({ closeModal, onSuccess }) => {
       } catch (error) {
         console.error('Ошибка при добавлении отзыва:', error);
       }
+    } else {
+      Notiflix.Notify.failure('Пожалуйста, заполните все поля формы.', {
+        position: 'center-center',
+        timeout: 3000,
+      });
     }
   };
 
@@ -64,7 +70,9 @@ const ModalReview = ({ closeModal, onSuccess }) => {
               onChange={handleInputChange}
             />
             {formErrors.name && (
-              <div className="error_message">{formErrors.name}</div>
+              <div style={{ display: 'none' }}>
+                {formErrors.name}
+              </div>
             )}
           </label>
           <br />
@@ -78,12 +86,13 @@ const ModalReview = ({ closeModal, onSuccess }) => {
               onChange={handleInputChange}
             />
             {formErrors.comment && (
-              <div className="error_message">{formErrors.comment}</div>
+              <div style={{ display: 'none' }}>
+                {formErrors.comment}
+              </div>
             )}
           </label>
           <br />
-          <button
-            className="reviews_button" type="submit">
+          <button className="reviews_button" type="submit">
             ВІДПРАВИТИ ВІДГУК
           </button>
         </form>
