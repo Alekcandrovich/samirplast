@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import store from '../../redux/store';
 import 'modern-normalize';
+import CustomLoader from '../../components/Loader/CustomLoader';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 import Header from '../Header/Header';
@@ -33,7 +34,7 @@ const App = () => {
       <Router basename="/samirplast">
         <ScrollToTop />
         <Header />
-        <Suspense fallback={<div>Загрузка...</div>}>
+        <Suspense fallback={<CustomLoader />}>
           <Routes>
             <Route
               path="/"
