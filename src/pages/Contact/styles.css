@@ -90,10 +90,24 @@
 }
 
 .map {
-  width: 100%;
-  max-width: 780px;
-  height: auto;
+  width: 450px;
+  height: 369px;
   border: 2px solid var(--color-button);
   border-radius: 10px;
-  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1200px) {
+
+  .map {
+    width: 780px;
+    height: 644px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+  .map {
+    width: 738px;
+    height: 609px;
+  }
 }

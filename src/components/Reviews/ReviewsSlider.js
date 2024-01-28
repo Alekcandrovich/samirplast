@@ -45,7 +45,7 @@ const ReviewsSlider = ({ reviews }) => {
 
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,

@@ -48,6 +48,7 @@ const ModalProduct = ({ images, closeModal }) => {
 
   const settings = {
     dots: true,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
