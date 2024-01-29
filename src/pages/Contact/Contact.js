@@ -69,14 +69,16 @@ const Contact = () => {
       </div>
       <div className="connection">
         <h2 className="connection_titel-map">Ми на карті</h2>
-        <iframe
-          className="map link"
-          title="Карта"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.237859668496!2d36.31372017626286!3d50.00689681920174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270be50df97799%3A0x99ead68d07f501c6!2z0KHQsNC80LjRgNCf0LvQsNGB0YI!5e0!3m2!1sru!2sua!4v1706452640941!5m2!1sru!2sua"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div className="map_container">
+          <iframe
+            className="map link"
+            title="Карта"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.237859668496!2d36.31372017626286!3d50.00689681920174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270be50df97799%3A0x99ead68d07f501c6!2z0KHQsNC80LjRgNCf0LvQsNGB0YI!5e0!3m2!1sru!2sua!4v1706452640941!5m2!1sru!2sua"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
