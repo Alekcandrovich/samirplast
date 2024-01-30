@@ -1,3 +1,11 @@
+:root {
+  --transition-timing: ease-in-out;
+  /* Замените на вашу желаемую функцию времени */
+  --transition-duration: 0.5s;
+  /* Замените на вашу желаемую продолжительность анимации */
+}
+
+
 .modal_overlay {
   position: fixed;
   top: 0;
@@ -8,11 +16,12 @@
   z-index: 2000;
 }
 
-.modal_content {
+/* .modal_content {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%);
   width: 95%;
   height: 100%;
   max-width: 820px;
@@ -23,7 +32,7 @@
   margin: 0;
   z-index: 3000;
   transition: transform var(--transition-timing) var(--transition-duration);
-}
+} */
 
 .image_container {
   overflow-y: auto;
@@ -165,4 +174,42 @@
   padding: 40px;
   border-radius: 8px;
   z-index: 1051;
+}
+
+
+
+
+
+
+
+.modal_content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 95%;
+  height: 100%;
+  max-width: 820px;
+  max-height: 680px;
+  background-color: var(--background-slogan);
+  border-radius: 8px;
+  padding: 40px;
+  margin: 0;
+  z-index: 3000;
+  opacity: 0;
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+
+.modal-entering,
+.modal-exiting {
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+  opacity: 0;
+}
+
+.modal-entered,
+.modal-exited {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+  opacity: 1;
 }
