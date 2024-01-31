@@ -63,12 +63,9 @@ const ModalProduct = ({ images, closeModal }) => {
   return (
     <Transition in={true}>
       {state => (
-        <div
-          className={`modal_overlay`}
-          onClick={closeModal}
-        >
+        <div className={`modal_overlay`} onClick={closeModal}>
           <div
-            className={`modal_product modal-enter-${state}`}
+            className={`modal_product modal-${state}`}
             onClick={e => e.stopPropagation()}
           >
             <button type="button" className="close_modal" onClick={closeModal}>

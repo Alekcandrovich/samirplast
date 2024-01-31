@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "@types/react-modal": "^3.16.3",
+    "@types/react-slick": "^0.23.13",
     "@types/react-transition-group": "^4.4.10"
   }
 }

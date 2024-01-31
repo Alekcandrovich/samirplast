@@ -10,18 +10,6 @@
   z-index: 2000;
 }
 
-.modal-entering,
-.modal-exiting {
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-}
-
-.modal-entered,
-.modal-exited {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-}
-
 .image_container {
   overflow-y: auto;
   max-height: calc(100vh - 150px);
