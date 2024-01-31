@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Slider from 'react-slick';
+import { Transition } from 'react-transition-group';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import icons from './icons.svg';
@@ -60,40 +61,59 @@ const ModalProduct = ({ images, closeModal }) => {
   };
 
   return (
-    <div className="modal_overlay" onClick={closeModal}>
-      <div className="modal_product" onClick={e => e.stopPropagation()}>
-        <button type="button" className="close_modal" onClick={closeModal}>
-          <svg className="icon_modal">
-            <use xlinkHref={`${icons}#close`} />
-          </svg>
-        </button>
-        <Slider {...settings}>
-          {images.map((imageData, index) => (
-            <div key={index} className="slide">
-              <img className="slide_img" src={imageData.imageSrc} alt={`Slide ${index + 1}`} />
-              <p
-                style={{
-                  textAlign: 'center',
-                  marginTop: '10px',
-                  width: '100%',
-                }}
-              >
-                {imageData.text.includes('(') ? (
-                  <>
-                    {imageData.text.substring(0, imageData.text.indexOf('('))}
-                    <span style={{ fontWeight: 'bold', color: 'red' }}>
-                      {imageData.text.substring(imageData.text.indexOf('('))}
-                    </span>
-                  </>
-                ) : (
-                  imageData.text
-                )}
-              </p>
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </div>
+    <Transition in={true}>
+      {state => (
+        <div
+          className={`modal_overlay`}
+          onClick={closeModal}
+        >
+          <div
+            className={`modal_product modal-enter-${state}`}
+            onClick={e => e.stopPropagation()}
+          >
+            <button type="button" className="close_modal" onClick={closeModal}>
+              <svg className="icon_modal">
+                <use xlinkHref={`${icons}#close`} />
+              </svg>
+            </button>
+            <Slider {...settings}>
+              {images.map((imageData, index) => (
+                <div key={index} className="slide">
+                  <img
+                    className="slide_img"
+                    src={imageData.imageSrc}
+                    alt={`Slide ${index + 1}`}
+                  />
+                  <p
+                    style={{
+                      textAlign: 'center',
+                      marginTop: '10px',
+                      width: '100%',
+                    }}
+                  >
+                    {imageData.text.includes('(') ? (
+                      <>
+                        {imageData.text.substring(
+                          0,
+                          imageData.text.indexOf('(')
+                        )}
+                        <span style={{ fontWeight: 'bold', color: 'red' }}>
+                          {imageData.text.substring(
+                            imageData.text.indexOf('(')
+                          )}
+                        </span>
+                      </>
+                    ) : (
+                      imageData.text
+                    )}
+                  </p>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      )}
+    </Transition>
   );
 };
 

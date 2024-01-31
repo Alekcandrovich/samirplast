@@ -21,7 +21,7 @@ const ModalPrice = ({ imgSrc, isOpen, onRequestClose }) => {
           onRequestClose={onRequestClose}
           contentLabel="Image Modal"
           overlayClassName="modal_overlay"
-          className={`modal_content modal-${state}`}
+          className={`modal_price modal-${state}`}
         >
           <button onClick={onRequestClose} className="close_modal">
             <svg className="icon_modal">
