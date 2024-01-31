@@ -4,7 +4,6 @@ import { setReviews } from '../../redux/actions';
 import { fetchReviewsApi } from '../../api/api';
 import ReviewsSlider from './ReviewsSlider';
 import Notiflix from 'notiflix';
-import CustomLoader from '../../components/Loader/CustomLoader';
 import ModalReview from '../../components/Modal/ModalReview';
 import './styles.css';
 
@@ -80,7 +79,6 @@ const Reviews = () => {
     <div className="reviews">
       <h2 className="reviews_h2">ВІДГУКИ</h2>
 
-      {loading && <CustomLoader />}
       {error && <p>Error: {error}</p>}
       {!loading && !error && (
         <>

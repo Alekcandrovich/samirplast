@@ -71,8 +71,8 @@
   margin: 0;
   z-index: 3000;
   opacity: 0;
-  transition: transform var(--transition-duration-product) ease-in-out,
-    opacity var(--transition-duration-product) ease-in-out;
+  transition: transform var(--transition-timing) var(--transition-duration-product),
+    opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 /* !---------------Modal Product-------------------------- */
@@ -91,10 +91,9 @@
   padding: 40px;
   margin: 0;
   z-index: 1000;
-  transition: transform var(--transition-timing) var(--transition-duration);
 opacity: 0;
-  transition: transform var(--transition-duration-product) ease-in-out,
-    opacity var(--transition-duration-product) ease-in-out;
+  transition: transform var(--transition-timing) var(--transition-duration-product),
+    opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 @media screen and (max-width: 1200px) {
