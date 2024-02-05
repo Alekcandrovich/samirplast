@@ -1,15 +1,5 @@
 /* !-------------------Modal All-------------------------- */
 
-/* .modal_overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-overlay-body);
-  z-index: 2000;
-} */
-
 .modal_overlay {
   position: fixed;
   top: 0;
@@ -20,10 +10,6 @@
   z-index: 2000;
   opacity: 0;
   visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 500ms, visibility 500ms;
 }
 
 .modal_overlay.active {
@@ -93,7 +79,9 @@
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 500ms, visibility 500ms, transform 500ms;
+  transition: opacity var(--transition-duration-product),
+              visibility var(--transition-duration-product),
+              transform var(--transition-duration-product);
 }
 
 .modal_price.active {
@@ -118,9 +106,9 @@
   padding: 40px;
   margin: 0;
   z-index: 1000;
-  /* opacity: 1;
+  opacity: 1;
   transition: transform var(--transition-timing) var(--transition-duration-product),
-    opacity var(--transition-timing) var(--transition-duration-product); */
+              opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 @media screen and (max-width: 1200px) {
@@ -136,16 +124,16 @@
 .modal-exited {
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
-    transition: transform var(--transition-timing) var(--transition-duration-product),
-        opacity var(--transition-timing) var(--transition-duration-product);
+  transition: transform var(--transition-timing) var(--transition-duration-product),
+              opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 .modal-entering,
 .modal-entered {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-    transition: transform var(--transition-timing) var(--transition-duration-product),
-        opacity var(--transition-timing) var(--transition-duration-product);
+  transition: transform var(--transition-timing) var(--transition-duration-product),
+              opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 /* !---------------Slider Product-------------------------- */
