@@ -1,5 +1,15 @@
 /* !-------------------Modal All-------------------------- */
 
+/* .modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-overlay-body);
+  z-index: 2000;
+} */
+
 .modal_overlay {
   position: fixed;
   top: 0;
@@ -8,6 +18,17 @@
   height: 100%;
   background-color: var(--color-overlay-body);
   z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 500ms, visibility 500ms;
+}
+
+.modal_overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .image_container {
@@ -69,7 +90,17 @@
   padding: 40px;
   margin: 0;
   z-index: 3000;
-  }
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 500ms, visibility 500ms, transform 500ms;
+}
+
+.modal_price.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
 
 /* !---------------Modal Product-------------------------- */
 
@@ -87,9 +118,9 @@
   padding: 40px;
   margin: 0;
   z-index: 1000;
-  opacity: 0;
+  /* opacity: 1;
   transition: transform var(--transition-timing) var(--transition-duration-product),
-    opacity var(--transition-timing) var(--transition-duration-product);
+    opacity var(--transition-timing) var(--transition-duration-product); */
 }
 
 @media screen and (max-width: 1200px) {
@@ -101,16 +132,16 @@
 
 /* !------------------Modal Transition-------------------- */
 
-.modal_price.modal-exiting,
-.modal_price.modal-exited {
+.modal-exiting,
+.modal-exited {
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
     transition: transform var(--transition-timing) var(--transition-duration-product),
         opacity var(--transition-timing) var(--transition-duration-product);
 }
 
-.modal_price.modal-entering,
-.modal_price.modal-entered {
+.modal-entering,
+.modal-entered {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
     transition: transform var(--transition-timing) var(--transition-duration-product),
