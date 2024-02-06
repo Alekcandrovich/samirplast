@@ -25,6 +25,14 @@
   width: 100%;
   padding: 8px;
   margin-top: 5px;
+  background-color: var(--background-general);
+}
+
+.reviews_input:hover,
+.reviews_textarea:hover,
+.reviews_input:focus,
+.reviews_textarea:focus {
+  border-color: var(--color-button-link);
 }
 
 .reviews_button {
