@@ -196,19 +196,44 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1050;
   width: 100%;
   height: 100%;
   background-color: var(--color-overlay-body);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modale_overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modale_content {
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   background-color: var(--background-slogan);
   padding: 40px;
   border-radius: 8px;
   z-index: 1051;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform var(--transition-timing) var(--transition-duration-product),
+    opacity var(--transition-timing) var(--transition-duration-product);
+}
+
+.modale_content.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.modale_content.closing {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+  transition: opacity var(--transition-duration-product),
+    visibility var(--transition-duration-product),
+    transform var(--transition-duration-product);
 }

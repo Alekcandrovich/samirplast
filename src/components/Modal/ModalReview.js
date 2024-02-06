@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { setReviews } from '../../redux/actions';
 import { addReviewApi, fetchReviewsApi } from '../../api/api';
@@ -10,30 +10,36 @@ const ModalReview = ({ closeModal, onSuccess }) => {
   const [newReview, setNewReview] = useState({ name: '', comment: '' });
   const [formErrors, setFormErrors] = useState({});
   const dispatch = useDispatch();
-  const [isModalOpen] = useState(true);
+  const [isClosing, setIsClosing] = useState(false);
 
   useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = isClosing ? 'auto' : 'hidden';
+  }, [isClosing]);
 
-    const handleEsc = event => {
-      if (event.key === 'Escape') {
-        closeModal();
+  const closeModalWithAnimation = useCallback(() => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsClosing(false);
+      closeModal();
+    }, 500);
+  }, [closeModal]);
+
+  const handleEscape = useCallback(
+    e => {
+      if (e.key === 'Escape') {
+        closeModalWithAnimation();
       }
-    };
+    },
+    [closeModalWithAnimation]
+  );
 
-    document.addEventListener('keydown', handleEsc);
+  useEffect(() => {
+    document.addEventListener('keydown', handleEscape);
 
     return () => {
-      document.body.style.overflow = 'auto';
-      document.removeEventListener('keydown', handleEsc);
+      document.removeEventListener('keydown', handleEscape);
     };
-  }, [isModalOpen, closeModal]);
-
-
+  }, [handleEscape]);
 
   const validateForm = () => {
     const errors = {};
@@ -62,7 +68,7 @@ const ModalReview = ({ closeModal, onSuccess }) => {
         const reviews = await fetchReviewsApi();
         dispatch(setReviews(reviews));
         onSuccess();
-        closeModal();
+        closeModalWithAnimation();
       } catch (error) {
         console.error('Ошибка при добавлении отзыва:', error);
       }
@@ -74,21 +80,20 @@ const ModalReview = ({ closeModal, onSuccess }) => {
     }
   };
 
-  const handleKeyDown = e => {
-    if (e.key === 'Escape') {
-      closeModal();
-    }
-  };
-
   return (
-    <div className="modale_overlay" onClick={closeModal}>
+    <div
+      className={`modale_overlay ${isClosing ? 'closing' : ''} ${
+        isClosing ? '' : 'active'
+      }`}
+      onClick={closeModalWithAnimation}
+    >
       <div
-        className="modale_content"
+        className={`modale_content ${isClosing ? 'closing' : ''} ${
+          isClosing ? '' : 'active'
+        }`}
         onClick={e => e.stopPropagation()}
-        onKeyDown={handleKeyDown}
-        tabIndex="0"
       >
-        <button className="close_modal" onClick={closeModal}>
+        <button className="close_modal" onClick={closeModalWithAnimation}>
           <svg className="icon_modal">
             <use xlinkHref={`${icons}#close`} />
           </svg>
