@@ -215,6 +215,7 @@
   left: 50%;
   background-color: var(--background-slogan);
   padding: 40px;
+  padding-top: 20px;
   border-radius: 8px;
   z-index: 1051;
   opacity: 0;
@@ -236,4 +237,10 @@
   transition: opacity var(--transition-duration-product),
     visibility var(--transition-duration-product),
     transform var(--transition-duration-product);
+}
+
+@media screen and (max-width: 768px) {
+  .modale_content {
+    padding: 20px;
+  }
 }
