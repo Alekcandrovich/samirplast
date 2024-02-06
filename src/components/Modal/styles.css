@@ -80,8 +80,8 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--transition-duration-product),
-              visibility var(--transition-duration-product),
-              transform var(--transition-duration-product);
+    visibility var(--transition-duration-product),
+    transform var(--transition-duration-product);
 }
 
 .modal_price.active {
@@ -90,13 +90,21 @@
   visibility: visible;
 }
 
+.modal_price.closing {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+  transition: opacity var(--transition-duration-product),
+    visibility var(--transition-duration-product),
+    transform var(--transition-duration-product);
+}
+
 /* !---------------Modal Product-------------------------- */
 
 .modal_product {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
   width: 100%;
   height: 100%;
   max-width: 550px;
@@ -106,9 +114,26 @@
   padding: 40px;
   margin: 0;
   z-index: 1000;
-  opacity: 1;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  visibility: hidden;
   transition: transform var(--transition-timing) var(--transition-duration-product),
-              opacity var(--transition-timing) var(--transition-duration-product);
+    opacity var(--transition-timing) var(--transition-duration-product);
+}
+
+.modal_product.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal_product.closing {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+  transition: opacity var(--transition-duration-product),
+    visibility var(--transition-duration-product),
+    transform var(--transition-duration-product);
 }
 
 @media screen and (max-width: 1200px) {
@@ -116,24 +141,6 @@
     max-width: 450px;
     max-height: 580px;
   }
-}
-
-/* !------------------Modal Transition-------------------- */
-
-.modal-exiting,
-.modal-exited {
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-  transition: transform var(--transition-timing) var(--transition-duration-product),
-              opacity var(--transition-timing) var(--transition-duration-product);
-}
-
-.modal-entering,
-.modal-entered {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  transition: transform var(--transition-timing) var(--transition-duration-product),
-              opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 /* !---------------Slider Product-------------------------- */

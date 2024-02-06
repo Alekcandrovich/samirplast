@@ -1,24 +1,35 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 import icons from './icons.svg';
 import './styles.css';
 
 const ModalPrice = ({ imgSrc, isOpen, onRequestClose }) => {
-  const closeModal = useCallback(() => onRequestClose(), [onRequestClose]);
+  const [isClosing, setIsClosing] = useState(false);
+
+  const closeModal = useCallback(() => {
+    setIsClosing(true);
+    setTimeout(() => onRequestClose(), 500);
+  }, [onRequestClose]);
 
   useEffect(() => {
-    const handleEscape = event =>
-      isOpen && event.key === 'Escape' && closeModal();
+    const handleEscape = e => isOpen && e.key === 'Escape' && closeModal();
+
     document.body.classList.toggle('modal-open', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : 'auto';
     document.addEventListener('keydown', handleEscape);
+
     return () => {
       document.removeEventListener('keydown', handleEscape);
       document.body.style.overflow = 'auto';
+      setIsClosing(false);
     };
   }, [isOpen, closeModal]);
 
   const overlayClassName = isOpen ? 'modal_overlay active' : 'modal_overlay';
-  const modalClassName = isOpen ? 'modal_price active' : 'modal_price';
+  const modalClassName = isClosing
+    ? 'modal_price closing'
+    : isOpen
+    ? 'modal_price active'
+    : 'modal_price';
 
   return (
     <div

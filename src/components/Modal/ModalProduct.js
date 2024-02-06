@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Slider from 'react-slick';
-import { Transition } from 'react-transition-group';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import icons from './icons.svg';
@@ -23,29 +22,32 @@ const NextArrow = ({ onClick }) => (
 );
 
 const ModalProduct = ({ images, closeModal }) => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
+  const closeAnimation = useCallback(() => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setModalVisible(false);
+      closeModal();
+    }, 500);
+  }, [closeModal]);
+
   useEffect(() => {
     const closeOnEsc = event => {
       if (event.key === 'Escape') {
-        closeModal();
-      }
-    };
-
-    const closeOnClickOutside = event => {
-      if (event.target.classList.contains('modal_overlay')) {
-        closeModal();
+        closeAnimation();
       }
     };
 
     document.body.addEventListener('keydown', closeOnEsc);
-    document.body.addEventListener('click', closeOnClickOutside);
     document.body.style.overflow = 'hidden';
 
     return () => {
       document.body.removeEventListener('keydown', closeOnEsc);
-      document.body.removeEventListener('click', closeOnClickOutside);
       document.body.style.overflow = 'auto';
     };
-  }, [closeModal]);
+  }, [closeAnimation]);
 
   const settings = {
     dots: true,
@@ -60,57 +62,58 @@ const ModalProduct = ({ images, closeModal }) => {
     nextArrow: <NextArrow />,
   };
 
+  useEffect(() => {
+    setModalVisible(true);
+  }, []);
+
+  const overlayClassName = modalVisible
+    ? 'modal_overlay active'
+    : 'modal_overlay';
+  const modalClassName = isClosing
+    ? 'modal_product closing'
+    : modalVisible
+    ? 'modal_product active'
+    : 'modal_product';
+
   return (
-    <Transition in={true}>
-      {state => (
-        <div className={`modal_overlay`} onClick={closeModal}>
-          <div
-            className={`modal_product modal-${state}`}
-            onClick={e => e.stopPropagation()}
-          >
-            <button type="button" className="close_modal" onClick={closeModal}>
-              <svg className="icon_modal">
-                <use xlinkHref={`${icons}#close`} />
-              </svg>
-            </button>
-            <Slider {...settings}>
-              {images.map((imageData, index) => (
-                <div key={index} className="slide">
-                  <img
-                    className="slide_img"
-                    src={imageData.imageSrc}
-                    alt={`Slide ${index + 1}`}
-                  />
-                  <p
-                    style={{
-                      textAlign: 'center',
-                      marginTop: '10px',
-                      width: '100%',
-                    }}
-                  >
-                    {imageData.text.includes('(') ? (
-                      <>
-                        {imageData.text.substring(
-                          0,
-                          imageData.text.indexOf('(')
-                        )}
-                        <span style={{ fontWeight: 'bold', color: 'red' }}>
-                          {imageData.text.substring(
-                            imageData.text.indexOf('(')
-                          )}
-                        </span>
-                      </>
-                    ) : (
-                      imageData.text
-                    )}
-                  </p>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
-      )}
-    </Transition>
+    <div className={`${overlayClassName}`} onClick={closeAnimation}>
+      <div className={`${modalClassName}`} onClick={e => e.stopPropagation()}>
+        <button type="button" className="close_modal" onClick={closeAnimation}>
+          <svg className="icon_modal">
+            <use xlinkHref={`${icons}#close`} />
+          </svg>
+        </button>
+        <Slider {...settings}>
+          {images.map((imageData, index) => (
+            <div key={index} className="slide">
+              <img
+                className="slide_img"
+                src={imageData.imageSrc}
+                alt={`Slide ${index + 1}`}
+              />
+              <p
+                style={{
+                  textAlign: 'center',
+                  marginTop: '10px',
+                  width: '100%',
+                }}
+              >
+                {imageData.text.includes('(') ? (
+                  <>
+                    {imageData.text.substring(0, imageData.text.indexOf('('))}
+                    <span style={{ fontWeight: 'bold', color: 'red' }}>
+                      {imageData.text.substring(imageData.text.indexOf('('))}
+                    </span>
+                  </>
+                ) : (
+                  imageData.text
+                )}
+              </p>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </div>
   );
 };
 
