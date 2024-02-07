@@ -62,6 +62,10 @@
   background-color: var(--color-button-link);
 }
 
+.reviews_button.modale {
+margin-top: 40px;
+}
+
 .slider {
   padding: 10px;
   border-radius: 8px;

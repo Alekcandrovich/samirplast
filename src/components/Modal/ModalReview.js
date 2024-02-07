@@ -128,7 +128,7 @@ const ModalReview = ({ closeModal, onSuccess }) => {
             )}
           </label>
           <br />
-          <button className="reviews_button" type="submit">
+          <button className="reviews_button modale" type="submit">
             ВІДПРАВИТИ ВІДГУК
           </button>
         </form>
