@@ -62,3 +62,16 @@
 .product_detail_info h2:hover {
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+.hover-message {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+}
