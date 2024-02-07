@@ -13,8 +13,10 @@
   }
 }
 
-.product_detail:hover {
+.product_detail:hover,
+.product_detail:focus {
   cursor: pointer;
+  border: 2px solid var(--color-button-link);
 }
 
 .product_detail_image {
