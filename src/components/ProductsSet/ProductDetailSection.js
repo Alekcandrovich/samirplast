@@ -8,8 +8,8 @@ const ProductDetailSection = ({
   sliderImages,
 }) => {
   return (
-    <section className="section3" onClick={() => openSlider(sliderImages)}>
-      <div className="container">
+    <section className="section3">
+      <div className="container" onClick={() => openSlider(sliderImages)}>
         <div className="product_detail open-modal_product">
           <img
             className="product_detail_image"
