@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/samirplast/static/css/main.41c5e916.css",
-    "main.js": "/samirplast/static/js/main.544f16c8.js",
+    "main.js": "/samirplast/static/js/main.7422bd99.js",
     "static/css/741.e685058d.chunk.css": "/samirplast/static/css/741.e685058d.chunk.css",
     "static/js/741.7de2a30a.chunk.js": "/samirplast/static/js/741.7de2a30a.chunk.js",
     "static/css/909.39762c3d.chunk.css": "/samirplast/static/css/909.39762c3d.chunk.css",
     "static/js/909.ce27252a.chunk.js": "/samirplast/static/js/909.ce27252a.chunk.js",
-    "static/css/314.b8de2dee.chunk.css": "/samirplast/static/css/314.b8de2dee.chunk.css",
+    "static/css/314.5d5d7b96.chunk.css": "/samirplast/static/css/314.5d5d7b96.chunk.css",
     "static/js/314.3a9a5cd0.chunk.js": "/samirplast/static/js/314.3a9a5cd0.chunk.js",
     "static/css/469.f829d7ed.chunk.css": "/samirplast/static/css/469.f829d7ed.chunk.css",
     "static/js/469.6c680ed5.chunk.js": "/samirplast/static/js/469.6c680ed5.chunk.js",
@@ -43,12 +43,12 @@
     "static/media/slick.woff": "/samirplast/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/samirplast/index.html",
     "main.41c5e916.css.map": "/samirplast/static/css/main.41c5e916.css.map",
-    "main.544f16c8.js.map": "/samirplast/static/js/main.544f16c8.js.map",
+    "main.7422bd99.js.map": "/samirplast/static/js/main.7422bd99.js.map",
     "741.e685058d.chunk.css.map": "/samirplast/static/css/741.e685058d.chunk.css.map",
     "741.7de2a30a.chunk.js.map": "/samirplast/static/js/741.7de2a30a.chunk.js.map",
     "909.39762c3d.chunk.css.map": "/samirplast/static/css/909.39762c3d.chunk.css.map",
     "909.ce27252a.chunk.js.map": "/samirplast/static/js/909.ce27252a.chunk.js.map",
-    "314.b8de2dee.chunk.css.map": "/samirplast/static/css/314.b8de2dee.chunk.css.map",
+    "314.5d5d7b96.chunk.css.map": "/samirplast/static/css/314.5d5d7b96.chunk.css.map",
     "314.3a9a5cd0.chunk.js.map": "/samirplast/static/js/314.3a9a5cd0.chunk.js.map",
     "469.f829d7ed.chunk.css.map": "/samirplast/static/css/469.f829d7ed.chunk.css.map",
     "469.6c680ed5.chunk.js.map": "/samirplast/static/js/469.6c680ed5.chunk.js.map",
@@ -77,6 +77,6 @@
   },
   "entrypoints": [
     "static/css/main.41c5e916.css",
-    "static/js/main.544f16c8.js"
+    "static/js/main.7422bd99.js"
   ]
 }
