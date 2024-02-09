@@ -73,7 +73,7 @@ const ModalReview = ({ closeModal, onSuccess }) => {
         console.error('Ошибка при добавлении отзыва:', error);
       }
     } else {
-      Notiflix.Notify.failure('Пожалуйста, заполните все поля формы.', {
+      Notiflix.Notify.failure('Будь ласка, заповніть усі поля форми.', {
         position: 'center-center',
         timeout: 3000,
       });
