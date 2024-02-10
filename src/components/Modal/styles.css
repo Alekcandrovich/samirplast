@@ -78,24 +78,19 @@
   z-index: 3000;
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
-  /* visibility: hidden; */
   transition: opacity var(--transition-duration-product),
-    /* visibility var(--transition-duration-product), */
     transform var(--transition-duration-product);
 }
 
 .modal_price.active {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-  /* visibility: visible; */
 }
 
 .modal_price.closing {
   opacity: 0;
-  /* visibility: hidden; */
   transform: translate(-50%, -50%) scale(0);
   transition: opacity var(--transition-duration-product),
-    /* visibility var(--transition-duration-product), */
     transform var(--transition-duration-product);
 }
 
@@ -116,7 +111,6 @@
   z-index: 1000;
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
-  /* visibility: hidden; */
   transition: transform var(--transition-timing) var(--transition-duration-product),
     opacity var(--transition-timing) var(--transition-duration-product);
 }
@@ -124,15 +118,12 @@
 .modal_product.active {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-  /* visibility: visible; */
 }
 
 .modal_product.closing {
   opacity: 0;
-  /* visibility: hidden; */
   transform: translate(-50%, -50%) scale(0);
   transition: opacity var(--transition-duration-product),
-    /* visibility var(--transition-duration-product), */
     transform var(--transition-duration-product);
 }
 
@@ -218,29 +209,22 @@
   padding-top: 20px;
   border-radius: 8px;
   z-index: 1051;
+  transform: translate(-50%, -50%) scale(0);
   opacity: 0;
-  /* visibility: hidden; */
-  transition: transform var(--transition-timing) var(--transition-duration-product),
-    opacity var(--transition-timing) var(--transition-duration-product);
+  visibility: hidden;
+  transition: transform 500ms, opacity 500ms;
 }
 
 .modale_content.active {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-  /* visibility: visible; */
+  visibility: visible;
+  transition-delay: 0ms;
 }
 
 .modale_content.closing {
   opacity: 0;
-  /* visibility: hidden; */
+  visibility: hidden;
   transform: translate(-50%, -50%) scale(0);
-  transition: opacity var(--transition-duration-product),
-    /* visibility var(--transition-duration-product), */
-    transform var(--transition-duration-product);
-}
-
-@media screen and (max-width: 768px) {
-  .modale_content {
-    padding: 20px;
-  }
+  transition: transform 500ms, opacity 500ms;
 }

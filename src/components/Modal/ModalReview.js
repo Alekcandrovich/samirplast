@@ -75,7 +75,7 @@ const ModalReview = ({ closeModal, onSuccess }) => {
     } else {
       Notiflix.Notify.failure('Будь ласка, заповніть усі поля форми.', {
         position: 'center-center',
-        timeout: 3000,
+        timeout: 2000,
       });
     }
   };

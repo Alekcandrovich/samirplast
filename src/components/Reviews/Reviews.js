@@ -71,7 +71,7 @@ const Reviews = () => {
   const addReviewSuccess = () => {
     Notiflix.Notify.success('Ваш відгук успішно додано!', {
       position: 'center-center',
-      timeout: 3000,
+      timeout: 2000,
     });
   };
 
