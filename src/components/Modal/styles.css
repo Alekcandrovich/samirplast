@@ -218,12 +218,10 @@
 .modale_content.active {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-  visibility: visible;
-  transition-delay: 0ms;
 }
 
 .modale_content.closing {
-  /* opacity: 0; */
+  opacity: 0;
   visibility: hidden;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 500ms, opacity 500ms;
