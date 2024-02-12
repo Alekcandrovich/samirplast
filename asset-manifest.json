@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/samirplast/static/css/main.a11a8471.css",
+    "main.css": "/samirplast/static/css/main.2bdbae26.css",
     "main.js": "/samirplast/static/js/main.c6e747f6.js",
     "static/css/741.e685058d.chunk.css": "/samirplast/static/css/741.e685058d.chunk.css",
     "static/js/741.7de2a30a.chunk.js": "/samirplast/static/js/741.7de2a30a.chunk.js",
@@ -42,7 +42,7 @@
     "static/media/slick.ttf": "/samirplast/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/samirplast/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/samirplast/index.html",
-    "main.a11a8471.css.map": "/samirplast/static/css/main.a11a8471.css.map",
+    "main.2bdbae26.css.map": "/samirplast/static/css/main.2bdbae26.css.map",
     "main.c6e747f6.js.map": "/samirplast/static/js/main.c6e747f6.js.map",
     "741.e685058d.chunk.css.map": "/samirplast/static/css/741.e685058d.chunk.css.map",
     "741.7de2a30a.chunk.js.map": "/samirplast/static/js/741.7de2a30a.chunk.js.map",
@@ -76,7 +76,7 @@
     "253.c71384cf.chunk.js.map": "/samirplast/static/js/253.c71384cf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a11a8471.css",
+    "static/css/main.2bdbae26.css",
     "static/js/main.c6e747f6.js"
   ]
 }
