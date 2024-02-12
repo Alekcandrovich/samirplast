@@ -223,7 +223,7 @@
 }
 
 .modale_content.closing {
-  opacity: 0;
+  /* opacity: 0; */
   visibility: hidden;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 500ms, opacity 500ms;
