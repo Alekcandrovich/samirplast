@@ -86,7 +86,7 @@ const Reviews = () => {
             ДОДАТИ ВІДГУК
           </button>
           {isModalOpen && (
-            <ModalReview closeModal={closeModal} onSuccess={addReviewSuccess} />
+            <ModalReview isOpen={isModalOpen} onRequestClose={closeModal} onSuccess={addReviewSuccess} />
           )}
         </>
       )}

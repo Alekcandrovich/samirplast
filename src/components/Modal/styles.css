@@ -78,8 +78,8 @@
   z-index: 3000;
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
-  transition: opacity var(--transition-duration-product),
-    transform var(--transition-duration-product);
+  transition: transform var(--transition-timing) var(--transition-duration-product),
+    opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 .modal_price.active {
@@ -88,10 +88,10 @@
 }
 
 .modal_price.closing {
-  opacity: 0;
   transform: translate(-50%, -50%) scale(0);
-  transition: opacity var(--transition-duration-product),
-    transform var(--transition-duration-product);
+  opacity: 0;
+  transition: transform var(--transition-timing) var(--transition-duration-product),
+    opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 /* !---------------Modal Product-------------------------- */
@@ -121,10 +121,10 @@
 }
 
 .modal_product.closing {
-  opacity: 0;
   transform: translate(-50%, -50%) scale(0);
-  transition: opacity var(--transition-duration-product),
-    transform var(--transition-duration-product);
+  opacity: 0;
+  transition: transform var(--transition-timing) var(--transition-duration-product),
+    opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 @media screen and (max-width: 1200px) {
@@ -209,6 +209,7 @@
   padding-top: 20px;
   border-radius: 8px;
   z-index: 1051;
+  transform: translate(-50%, -50%) scale(0);
   opacity: 0;
   transition: transform var(--transition-timing) var(--transition-duration-product),
     opacity var(--transition-timing) var(--transition-duration-product);
@@ -220,10 +221,10 @@
 }
 
 .modale_content.closing {
-  opacity: 0;
   transform: translate(-50%, -50%) scale(0);
-  transition: opacity var(--transition-duration-product),
-    transform var(--transition-duration-product);
+  opacity: 0;
+  transition: transform var(--transition-timing) var(--transition-duration-product),
+    opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 @media screen and (max-width: 768px) {
