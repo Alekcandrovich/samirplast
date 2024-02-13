@@ -62,9 +62,6 @@ const Reviews = () => {
       console.error('Не получен ответ:', error.request);
     } else {
       console.error('Ошибка настройки запроса:', error.message);
-      if (error.message.includes('empty fields')) {
-        Notiflix.Notify.failure('Пожалуйста, заполните все поля формы.');
-      }
     }
   };
 
