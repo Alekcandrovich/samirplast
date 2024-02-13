@@ -80,14 +80,14 @@ const ModalReview = ({ isOpen, onRequestClose, onSuccess }) => {
     }
   };
 
-  const overlayClassName = isOpen ? 'modale_overlay active' : 'modale_overlay';
-  const contentClassName = `modale_content ${isOpen ? 'active' : ''} ${
+  const overlayClassName = isOpen ? 'modal_overlay active' : 'modal_overlay';
+  const reviewClassName = `modale_review ${isOpen ? 'active' : ''} ${
     isClosing ? 'closing' : ''
   }`;
 
   return (
     <div className={`${overlayClassName}`} onClick={closeModalWithAnimation}>
-      <div className={`${contentClassName}`} onClick={e => e.stopPropagation()}>
+      <div className={`${reviewClassName}`} onClick={e => e.stopPropagation()}>
         <button className="close_modal" onClick={closeModalWithAnimation}>
           <svg className="icon_modal">
             <use xlinkHref={`${icons}#close`} />
