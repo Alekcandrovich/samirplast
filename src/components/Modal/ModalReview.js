@@ -86,7 +86,7 @@ const ModalReview = ({ isOpen, onRequestClose, onSuccess }) => {
   }`;
 
   return (
-    <div className={`${overlayClassName}`} onClick={closeModalWithAnimation}>
+    <div className={`${overlayClassName}`}>
       <div className={`${reviewClassName}`} onClick={e => e.stopPropagation()}>
         <button className="close_modal" onClick={closeModalWithAnimation}>
           <svg className="icon_modal">
