@@ -90,8 +90,6 @@
 .modal_price.closing {
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
-  transition: transform var(--transition-timing) var(--transition-duration-product),
-    opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 /* !---------------Modal Product-------------------------- */
@@ -123,8 +121,6 @@
 .modal_product.closing {
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
-  transition: transform var(--transition-timing) var(--transition-duration-product),
-    opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 @media screen and (max-width: 1200px) {
@@ -159,8 +155,6 @@
 .modale_review.closing {
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
-  transition: transform var(--transition-timing) var(--transition-duration-product),
-    opacity var(--transition-timing) var(--transition-duration-product);
 }
 
 @media screen and (max-width: 768px) {

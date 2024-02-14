@@ -80,7 +80,7 @@ const ModalReview = ({ isOpen, onRequestClose, onSuccess }) => {
     }
   };
 
-  const overlayClassName = isOpen ? 'modal_overlay active' : 'modal_overlay';
+  const overlayClassName = `modal_overlay ${isOpen ? 'active' : ''}`;
   const reviewClassName = `modale_review ${isOpen ? 'active' : ''} ${
     isClosing ? 'closing' : ''
   }`;
