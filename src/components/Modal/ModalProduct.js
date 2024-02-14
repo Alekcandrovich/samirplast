@@ -76,8 +76,8 @@ const ModalProduct = ({ images, closeModal }) => {
     : 'modal_product';
 
   return (
-    <div className={`${overlayClassName}`} onClick={closeAnimation}>
-      <div className={`${modalClassName}`} onClick={e => e.stopPropagation()}>
+    <div className={overlayClassName}>
+      <div className={modalClassName}>
         <button type="button" className="close_modal" onClick={closeAnimation}>
           <svg className="icon_modal">
             <use xlinkHref={`${icons}#close`} />
