@@ -33,11 +33,15 @@ const ModalPrice = ({ imgSrc, isOpen, onRequestClose }) => {
 
   return (
     <div
-      className={`${overlayClassName}`}
+      className={overlayClassName}
       id="modalOverlay"
-      onClick={closeModal}
+      onClick={e => {
+        if (isOpen) {
+          e.stopPropagation();
+        }
+      }}
     >
-      <div className={`${modalClassName}`} onClick={e => e.stopPropagation()}>
+      <div className={modalClassName}>
         <button onClick={closeModal} className="close_modal">
           <svg className="icon_modal">
             <use xlinkHref={`${icons}#close`} />
