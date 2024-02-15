@@ -132,7 +132,7 @@
 
 /* !---------------Modal Review-------------------------- */
 
-.modale_review {
+.modal_review {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -147,18 +147,18 @@
     opacity var(--transition-timing) var(--transition-duration-product);
 }
 
-.modale_review.active {
+.modal_review.active {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
 
-.modale_review.closing {
+.modal_review.closing {
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
 }
 
 @media screen and (max-width: 768px) {
-  .modale_review {
+  .modal_review {
     padding: 20px;
   }
 }

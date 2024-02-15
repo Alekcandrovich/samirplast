@@ -86,7 +86,7 @@ useEffect(() => {
 }, []);
 
 const overlayClassName = `modal_overlay ${isOpen && isMounted ? 'active' : ''}`;
-const reviewClassName = `modale_review ${isOpen && isMounted ? 'active' : ''} ${
+const reviewClassName = `modal_review ${isOpen && isMounted ? 'active' : ''} ${
   isClosing ? 'closing' : ''
 }`;
 
