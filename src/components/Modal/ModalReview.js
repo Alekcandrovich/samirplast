@@ -80,10 +80,15 @@ const ModalReview = ({ isOpen, onRequestClose, onSuccess }) => {
     }
   };
 
-  const overlayClassName = `modal_overlay ${isOpen ? 'active' : ''}`;
-  const reviewClassName = `modale_review ${isOpen ? 'active' : ''} ${
-    isClosing ? 'closing' : ''
-  }`;
+const [isMounted, setIsMounted] = useState(false);
+useEffect(() => {
+  setIsMounted(true);
+}, []);
+
+const overlayClassName = `modal_overlay ${isOpen && isMounted ? 'active' : ''}`;
+const reviewClassName = `modale_review ${isOpen && isMounted ? 'active' : ''} ${
+  isClosing ? 'closing' : ''
+}`;
 
   return (
     <div className={`${overlayClassName}`}>
