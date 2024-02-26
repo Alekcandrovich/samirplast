@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/samirplast/static/css/main.5f7de026.css",
-    "main.js": "/samirplast/static/js/main.f27b26a2.js",
+    "main.js": "/samirplast/static/js/main.15ed407c.js",
     "static/css/741.e685058d.chunk.css": "/samirplast/static/css/741.e685058d.chunk.css",
     "static/js/741.7de2a30a.chunk.js": "/samirplast/static/js/741.7de2a30a.chunk.js",
     "static/css/909.39762c3d.chunk.css": "/samirplast/static/css/909.39762c3d.chunk.css",
@@ -32,7 +32,7 @@
     "static/js/490.9a1a41b6.chunk.js": "/samirplast/static/js/490.9a1a41b6.chunk.js",
     "static/css/253.1556319b.chunk.css": "/samirplast/static/css/253.1556319b.chunk.css",
     "static/js/253.32ea1048.chunk.js": "/samirplast/static/js/253.32ea1048.chunk.js",
-    "static/js/475.f60a7509.chunk.js": "/samirplast/static/js/475.f60a7509.chunk.js",
+    "static/js/475.1b3dca99.chunk.js": "/samirplast/static/js/475.1b3dca99.chunk.js",
     "static/media/general_1400.jpg": "/samirplast/static/media/general_1400.d3fc1c2985a3bbb38c01.jpg",
     "static/media/general_768.jpg": "/samirplast/static/media/general_768.1f87b831f92285d13404.jpg",
     "static/media/general_450.jpg": "/samirplast/static/media/general_450.87755e8f131616ae117b.jpg",
@@ -43,7 +43,7 @@
     "static/media/slick.woff": "/samirplast/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/samirplast/index.html",
     "main.5f7de026.css.map": "/samirplast/static/css/main.5f7de026.css.map",
-    "main.f27b26a2.js.map": "/samirplast/static/js/main.f27b26a2.js.map",
+    "main.15ed407c.js.map": "/samirplast/static/js/main.15ed407c.js.map",
     "741.e685058d.chunk.css.map": "/samirplast/static/css/741.e685058d.chunk.css.map",
     "741.7de2a30a.chunk.js.map": "/samirplast/static/js/741.7de2a30a.chunk.js.map",
     "909.39762c3d.chunk.css.map": "/samirplast/static/css/909.39762c3d.chunk.css.map",
@@ -77,6 +77,6 @@
   },
   "entrypoints": [
     "static/css/main.5f7de026.css",
-    "static/js/main.f27b26a2.js"
+    "static/js/main.15ed407c.js"
   ]
 }
