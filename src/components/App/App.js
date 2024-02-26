@@ -17,7 +17,7 @@ const Baul = lazy(() => import('../../pages/Products/Baul'));
 const Bopp = lazy(() => import('../../pages/Products/Bopp'));
 const Mayka = lazy(() => import('../../pages/Products/Mayka'));
 const Meshki = lazy(() => import('../../pages/Products/Meshki'));
-const New = lazy(() => import('../../pages/Products/New'));
+const Banan = lazy(() => import('../../pages/Products/Banan'));
 const Odejda = lazy(() => import('../../pages/Products/Odejda'));
 const Paket = lazy(() => import('../../pages/Products/Paket'));
 const Rukav = lazy(() => import('../../pages/Products/Rukav'));
@@ -49,7 +49,7 @@ const App = () => {
             <Route path="/products/bopp" element={<Bopp />} />
             <Route path="/products/mayka" element={<Mayka />} />
             <Route path="/products/meshki" element={<Meshki />} />
-            <Route path="/products/new" element={<New />} />
+            <Route path="/products/banan" element={<Banan />} />
             <Route path="/products/odejda" element={<Odejda />} />
             <Route path="/products/paket" element={<Paket />} />
             <Route path="/products/Rukav" element={<Rukav />} />
