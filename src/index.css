@@ -9,6 +9,11 @@ body {
   color: var(--color-general);
 }
 
+body.dark-mode {
+  background-color: gray;
+  color: green;
+}
+
 body.modal-open {
   overflow: hidden;
 }

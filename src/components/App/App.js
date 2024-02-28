@@ -5,6 +5,7 @@ import store from '../../redux/store';
 import 'modern-normalize';
 import CustomLoader from '../../components/Loader/CustomLoader';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
+import ThemeProvider from '../Theme/ThemeProvider';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -31,6 +32,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
+      <ThemeProvider> {/* Оберните приложение провайдером темы */}
       <Router basename="/samirplast">
         <ScrollToTop />
         <Header />
@@ -64,8 +66,9 @@ const App = () => {
           </Routes>
         </Suspense>
         <Footer />
-      </Router>
-    </Provider>
+        </Router>
+        </ThemeProvider>
+        </Provider>
   );
 };
 

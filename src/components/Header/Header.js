@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import icons from './icons.svg';
+import { ThemeContext } from '../Theme/ThemeProvider';
 import './styles.css';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { toggleTheme, isDarkMode } = useContext(ThemeContext);
 
   const handleScroll = () => {
     const scrollPosition =
@@ -51,6 +53,11 @@ const Header = () => {
   return (
     <header className={headerClassName}>
       <div className="container logo__nav">
+        <div className="button" onClick={toggleTheme}>
+          {isDarkMode
+            ? 'Светлая тема'
+            : 'Темная тема'}
+        </div>
         <NavLink to="/" className="logo">
           Самiр<span className="logo logo__up">Пласт</span>
         </NavLink>
