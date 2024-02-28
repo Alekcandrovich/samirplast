@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from "react-router-dom";
+import { ThemeContext } from '../Theme/ThemeProvider';
 import icons from './icons.svg';
 import './styles.css';
 
 const Footer = () => {
+  const { isDarkMode } = useContext(ThemeContext);
+
+  const footerClassName = `footer${isDarkMode ? ' dark-mode' : ''}`;
   return (
-    <footer className="footer">
+    <footer className={footerClassName}>
       <div className="container social-contact">
         <div className="footer-contact">
           <NavLink to="/" className="logo">

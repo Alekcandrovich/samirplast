@@ -46,7 +46,9 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const headerClassName = `header${isScrolled ? ' fixed' : ''}`;
+  const headerClassName = `header${isDarkMode ? ' dark-mode' : ''}${
+    isScrolled ? ' fixed' : ''
+  }`;
   const activeLink = 'nav__link nav__link--current';
   const normalLink = 'nav__link';
 

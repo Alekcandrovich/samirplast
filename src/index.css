@@ -12,6 +12,14 @@ body.dark-mode {
   background-color: var(--background-dark);
 }
 
+body.dark-mode .header {
+  background-color: var(--background-dark);
+}
+
+body.dark-mode .footer {
+  background-color: var(--background-dark);
+}
+
 body.modal-open {
   overflow: hidden;
 }
