@@ -20,6 +20,10 @@ body.dark-mode .footer {
   background-color: var(--background-dark);
 }
 
+body.dark-mode .menu-container {
+  background-color: var(--background-dark);
+}
+
 body.modal-open {
   overflow: hidden;
 }
