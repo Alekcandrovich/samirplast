@@ -146,10 +146,6 @@ const Header = () => {
           </button>
         </div>
         {isMobileMenuOpen && (
-          // <div
-          //   className={`menu-container js-menu-container${
-          //     isMobileMenuOpen ? ' is-open' : ''
-          //   }`}
 
           <div
             className={`menu-container js-menu-container${
