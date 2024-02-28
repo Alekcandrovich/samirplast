@@ -116,7 +116,7 @@ const Header = () => {
           </ul>
         </div>
 
-        <button className="button" onClick={toggleTheme}>
+        <button className="theme" onClick={toggleTheme}>
           <svg className="icon-theme">
             {isDarkMode ? (
               <use xlinkHref={`${icons}#moon`} />

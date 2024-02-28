@@ -123,3 +123,16 @@ ul {
   align-items: center;
   margin-top: 5px;
 }
+
+.theme {
+  border: 1px solid #ffa500;
+  border-radius: 50%;
+  margin-left: 15px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.theme:hover,
+.theme:focus {
+  border: 1px solid #a3f5a2;
+}
