@@ -6,12 +6,11 @@ body {
     'Fira Sans', 'Droid Sans', 'Helvetica Neue';
 
   background-color: var(--background-general);
-  color: var(--color-general);
+  /* color: var(--color-general); */
 }
 
 body.dark-mode {
-  background-color: gray;
-  color: green;
+  background-color: var(--background-dark);
 }
 
 body.modal-open {

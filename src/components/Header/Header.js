@@ -53,11 +53,11 @@ const Header = () => {
   return (
     <header className={headerClassName}>
       <div className="container logo__nav">
-        <div className="button" onClick={toggleTheme}>
+        <button className="button" onClick={toggleTheme}>
           {isDarkMode
             ? 'Светлая тема'
             : 'Темная тема'}
-        </div>
+        </button>
         <NavLink to="/" className="logo">
           Самiр<span className="logo logo__up">Пласт</span>
         </NavLink>
