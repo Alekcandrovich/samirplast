@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import icons from './icons.svg';
 import { ThemeContext } from '../Theme/ThemeProvider';
+import icons from './icons.svg';
 import './styles.css';
 
 const Header = () => {
@@ -53,11 +53,6 @@ const Header = () => {
   return (
     <header className={headerClassName}>
       <div className="container logo__nav">
-        <button className="button" onClick={toggleTheme}>
-          {isDarkMode
-            ? 'Светлая тема'
-            : 'Темная тема'}
-        </button>
         <NavLink to="/" className="logo">
           Самiр<span className="logo logo__up">Пласт</span>
         </NavLink>
@@ -120,6 +115,17 @@ const Header = () => {
             </li>
           </ul>
         </div>
+
+        <button className="button" onClick={toggleTheme}>
+          <svg className="icon-theme">
+            {isDarkMode ? (
+              <use xlinkHref={`${icons}#moon`} />
+            ) : (
+              <use xlinkHref={`${icons}#sun`} />
+            )}
+          </svg>
+        </button>
+
         <div className="menu-toggle__posicion">
           <button
             type="button"

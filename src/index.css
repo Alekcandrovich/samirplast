@@ -6,7 +6,6 @@ body {
     'Fira Sans', 'Droid Sans', 'Helvetica Neue';
 
   background-color: var(--background-general);
-  /* color: var(--color-general); */
 }
 
 body.dark-mode {
