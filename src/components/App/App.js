@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <ThemeProvider> {/* Оберните приложение провайдером темы */}
+      <ThemeProvider>
       <Router basename="/samirplast">
         <ScrollToTop />
         <Header />
