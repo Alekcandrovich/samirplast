@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/samirplast/static/css/main.7a8b9796.css",
-    "main.js": "/samirplast/static/js/main.b0bce308.js",
-    "static/css/741.e685058d.chunk.css": "/samirplast/static/css/741.e685058d.chunk.css",
+    "main.js": "/samirplast/static/js/main.3c3c4cb3.js",
+    "static/css/741.d11ec391.chunk.css": "/samirplast/static/css/741.d11ec391.chunk.css",
     "static/js/741.7de2a30a.chunk.js": "/samirplast/static/js/741.7de2a30a.chunk.js",
     "static/css/909.39762c3d.chunk.css": "/samirplast/static/css/909.39762c3d.chunk.css",
     "static/js/909.ef6182bf.chunk.js": "/samirplast/static/js/909.ef6182bf.chunk.js",
@@ -43,8 +43,8 @@
     "static/media/slick.woff": "/samirplast/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/samirplast/index.html",
     "main.7a8b9796.css.map": "/samirplast/static/css/main.7a8b9796.css.map",
-    "main.b0bce308.js.map": "/samirplast/static/js/main.b0bce308.js.map",
-    "741.e685058d.chunk.css.map": "/samirplast/static/css/741.e685058d.chunk.css.map",
+    "main.3c3c4cb3.js.map": "/samirplast/static/js/main.3c3c4cb3.js.map",
+    "741.d11ec391.chunk.css.map": "/samirplast/static/css/741.d11ec391.chunk.css.map",
     "741.7de2a30a.chunk.js.map": "/samirplast/static/js/741.7de2a30a.chunk.js.map",
     "909.39762c3d.chunk.css.map": "/samirplast/static/css/909.39762c3d.chunk.css.map",
     "909.ef6182bf.chunk.js.map": "/samirplast/static/js/909.ef6182bf.chunk.js.map",
@@ -77,6 +77,6 @@
   },
   "entrypoints": [
     "static/css/main.7a8b9796.css",
-    "static/js/main.b0bce308.js"
+    "static/js/main.3c3c4cb3.js"
   ]
 }
