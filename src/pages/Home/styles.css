@@ -133,10 +133,10 @@
 }
 
 .marquee {
-  animation: marquee1 8s linear infinite;
+  animation: marquee 8s linear infinite;
 }
 
-@keyframes marquee1 {
+@keyframes marquee {
   0% {
     transform: translateX(100%);
   }
