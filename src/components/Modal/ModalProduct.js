@@ -96,12 +96,13 @@ const ModalProduct = ({ images, closeModal }) => {
                   textAlign: 'center',
                   marginTop: '10px',
                   width: '100%',
+                  color: 'red',
                 }}
               >
                 {imageData.text.includes('(') ? (
                   <>
                     {imageData.text.substring(0, imageData.text.indexOf('('))}
-                    <span style={{ fontWeight: 'bold', color: 'red' }}>
+                    <span style={{ fontWeight: 'bold' }}>
                       {imageData.text.substring(imageData.text.indexOf('('))}
                     </span>
                   </>
