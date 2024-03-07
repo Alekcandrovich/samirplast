@@ -8,7 +8,7 @@ const getInitialMode = () => {
 };
 
 const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(getInitialMode);
+  const [isDarkMode, setIsDarkMode] = useState(getInitialMode());
 
   const applyTheme = useCallback(() => {
     document.body.classList.toggle('dark-mode', isDarkMode);
