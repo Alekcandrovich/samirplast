@@ -7,7 +7,7 @@ export const fetchReviewsApi = async () => {
     const response = await axios.get(`${API_URL}/reviews`);
     return response.data;
   } catch (error) {
-    console.error('Ошибка при получении отзывов:', error);
+    console.error('Ошибка при получении отзывов', error);
     throw error;
   }
 };
@@ -16,7 +16,7 @@ export const addReviewApi = async (newReview) => {
   try {
     await axios.post(`${API_URL}/reviews`, newReview);
   } catch (error) {
-    console.error('Ошибка при добавлении отзыва:', error);
+    console.error('Ошибка при добавлении отзыва', error);
     throw error;
   }
 };
